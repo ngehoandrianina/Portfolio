@@ -19,3 +19,12 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.no-scroll::-webkit-scrollbar{
+  display: none;
+ 
+}
+.no-scroll{
+  -ms-overflow-style: none; /* IE et Edge */
+  scrollbar-width: none; 
+}

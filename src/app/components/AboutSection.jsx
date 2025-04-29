@@ -2,6 +2,7 @@
 import react,{useTransition,useState} from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import Cassroll from "./Cassroll";
 
 
 
@@ -86,15 +87,22 @@ const  AboutSection = () =>{
             setTab(id)
         })
     }
+    const image = [
+        '/image/iah4.jpg',
+        '/image/iah8.jpg',
+        '/image/iah2.jpg',
+        '/image/photoko.jpg' 
+    ]
     return(
         <section className="text-white ">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16  sm:py-16 xl:px-16 "> 
-                <div className="flex">
-                <Image src='/image/moi1.png' alt="iah"  width={400} height={500} />     
-                <Image src='/image/moi3.png' alt="iah"  width={400} height={500} className="-ml-24" /> 
-                </div>
-               
-                
+                <Cassroll >
+                    {
+                        image.map((image,index)=>(
+                            <img src={image}  key={index} className="rounded-xl" />
+                        ))
+                    }
+                </Cassroll>
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full ">
                     <h2 className="text-4xl font-bold text-white mb-4">About me</h2>
                     <p className="text-base lg:text-lg ">I am curently in my third year of professional bachelor's degree at the Ecole Nationale d'Informatique ENI, following thw General Computer Science program.

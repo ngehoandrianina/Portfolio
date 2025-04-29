@@ -5,8 +5,12 @@ import NavLink from "./NavLink";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import AboutSection from "./AboutSection";
+import Image from "next/image";
 import {motion, useScroll,useSpring } from "framer-motion";
 const navLink = [
+    {
+        title: "Home",
+        href: "#Home",},
     {
         title: "About",
         href: "#about",
@@ -35,9 +39,9 @@ const Navbar = () => {
                     right: 0,
                     height: 10,
                     originX: 0,
-                    backgroundColor: "#ff0088",}}/>
+                    backgroundColor: "#179BB0",}}/>
         <div className="flex flex-wrap items-center  justify-between mx-auto p-3">
-            <Link href={"/"} className="text-2xl md:text-5xl text-white font-semibold">LOGO</Link>
+            <Link href={"/"} className=" ml-10" style={{fontFamily:'fantasy'}}><Image src='/image/logoNG.png' alt="iah" className="rounded-xl"  width={50} height={150} /> </Link>
             <div className="mobil-menu block md:hidden">
                 {
                     !navbarOpen ? (
@@ -51,20 +55,30 @@ const Navbar = () => {
                     )
                 }
             </div>
-            <div className="menu hidden md:block md:w-auto" id="navbar">
-                <ul className="flex p-4 md:p-0 flex-col md:flex-row md:space-x-8 mt-0 ">
+            <div className="menu hidden md:block md:w-auto mr-12" id="navbar">
+                <ul className="flex justify-center items-center p-4 md:p-0 flex-col md:flex-row md:space-x-8 mt-0 ">
                     {
                         navLink.map((link, index) => ( 
-                            <li key={index}>
-                                <NavLink href={link.href} title={link.title} />
+                            <li key={index} >
+                                <NavLink onClick={()=>setNavbarOpen(false)} href={link.href} title={link.title} />
                             </li>
                         ))
                     }
+                    <motion.ul className=' cursor-pointer px-6 py-2 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#053545] via-[#179BB0] to-[#86Cdd9] hover:bg-slate-800 text-white'
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 1,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
+            >Lets' talk</motion.ul>
                 </ul>
+                
             </div>
+            
         </div>
         {
-            navbarOpen ? <MenuOverlay links={navLink}/> : null
+            navbarOpen ? <MenuOverlay  links={navLink} Setnave={setNavbarOpen}/> : null
         }
     </nav>
    );

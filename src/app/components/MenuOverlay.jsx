@@ -1,16 +1,17 @@
 import react from "react";
 import NavLink from "./NavLink";
-const MenuOverlay = ({links}) => {
+import { motion } from "framer-motion";
+const MenuOverlay = ({links,Setnave}) => {
     return (
-        <ul className="flex flex-col py-4 items-center ">
+        <motion.ul initial={{height:0}} animate={{height:150}}  className="flex flex-col py-4 items-center ">
             {
                 links.map((link, index) => (
-                    <li key={index} className="mb-2">
+                    <motion.li initial={{opacity:0}} animate={{opacity:1}} key={index} className="mb-2" onClick={()=>Setnave(false)}>
                    <NavLink href={link.href} title={link.title} />
-                   </li>
+                   </motion.li>
                 ))
             }
-        </ul>
+        </motion.ul>
     )
 };
 export default MenuOverlay;

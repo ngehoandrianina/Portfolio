@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/navbar";
 import AboutSection from "./components/AboutSection";
@@ -8,11 +8,12 @@ import Footer from "./components/Footer";
 import AcrhivementSection from "./components/AcrhivementSection";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  bg-[#150404] scroll-smooth" >
+    <>
+    <main className=" overflow-hidden  flex min-h-screen flex-col  bg-[#150404] scroll-smooth" >
     <Navbar/>
     <div className="container mt-24 mx-auto px-12 py-4">
     <div>
-      <HeroSection />
+      <HeroSection id="Home" />
     </div>
     <div>
       <AcrhivementSection />
@@ -30,6 +31,8 @@ export default function Home() {
     </div>
     </div>
     <Footer />
+    
     </main>
+    </>
   );
 }

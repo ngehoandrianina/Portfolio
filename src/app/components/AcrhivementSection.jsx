@@ -31,7 +31,7 @@ const AnimatedNumber = ({ value }) => {
       ref={ref}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={controls}
-      className='text-white text-4xl font-bold'
+      className='text-white text-xl lg:text-4xl font-bold'
     >
       {value}
     </motion.span>
@@ -44,12 +44,12 @@ const AchievementSection = () => {
       <div className='border-[#33353f] border rounded-md py-8 px-17 flex flex-row items-center justify-between'>
         {AchievementList.map((achievement) => (
           <div key={achievement.id} className='flex flex-col items-center justify-center mx-4'>
-            <h2 className='text-white text-4xl font-bold'>
+            <h2 className='text-white lg:text-xl font-bold'>
               {achievement.prefix}{' '}
               <AnimatedNumber value={achievement.value} />
               {achievement.prefix}
             </h2>
-            <p className='text-[#adb7be] text-base'>{achievement.metric}</p>
+            <p className='text-[#adb7be6c] text-base'>{achievement.metric}</p>
           </div>
         ))}
       </div>
