@@ -71,7 +71,7 @@ const Navbar = () => {
                 duration: 1,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
-            >Lets' talk</motion.ul>
+            ><Link href='#contact'>Lets' talk</Link></motion.ul>
                 </ul>
                 
             </div>

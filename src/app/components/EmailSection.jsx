@@ -49,11 +49,11 @@ const EmailSection = () => {
         {""}
         I'm curently available for new opportunity and open to any discussions. My inbox is always open. if you have any questions or would like to discus future project, I would be happy to share all my expertise and contribute to your initiatives.</p>
         <div className='socials flex flex-row gap-2'>
-            <Link href="https://github.com"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
-            <Link href="linkedin.com"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
-            <Link href="facebook.com"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
-            <Link href="facebook.com"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
-            <Link href="facebook.com"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
+            <Link href="https://github.com/ngehoandrianina"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
+            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
+            <Link href="https://www.facebook.com/claretanthoonio/"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
+            <Link href="https://wa.me/261340760917"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
+            <Link href="mailto:antonioclaret2004@gmail.com"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
         </div>
       </div>
       <div>

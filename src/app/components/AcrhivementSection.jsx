@@ -5,10 +5,10 @@ import { useInView } from 'react-intersection-observer';
 
 // Données des réalisations
 const AchievementList = [
-  { id: 1, metric: "Projects", value: 100, prefix: "+" },
-  { id: 2, metric: "Users", value: 1000, prefix: "~" },
+  { id: 1, metric: "Developer", value: 'Web'},
+  { id: 2, metric: "Developer", value: 'Mobil'},
   { id: 3, metric: "Awards", value: 10 },
-  { id: 4, metric: "Years", value: 5 },
+  { id: 4, metric: "Years", value: 3 },
 ];
 
 // Composant pour animer un nombre

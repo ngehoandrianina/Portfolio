@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { useEffect,useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link'
 
  const HeroSection = () => {
 
@@ -49,7 +50,7 @@ import { motion } from 'framer-motion';
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
              >
-            <span className='text-white bg-[#121212] hover:bg-slate-800 rounded-full px-20  lg:px-5 py-3 '>Download CV</span></motion.button>
+            <span className='text-white bg-[#121212] hover:bg-slate-800 rounded-full px-20  lg:px-5 py-3 '><Link href='/CVAntonioClaret.pdf'>Download CV</Link></span></motion.button>
         </div>
         </div>
         <div className='col-span-5 place-self-center mt-4 lg:mt-0 ml-4 ' >
