@@ -26,6 +26,7 @@ const  AboutSection = () =>{
             content : (
                 <ul className="list-disc pl-2 flex">
                     <ul className="mr-2"> <li><b>Fronted</b></li>
+                        <li>-React native</li>
                         <li>-ReactJS</li>
                         <li>-NextJS</li>
                         <li>-HTML</li>
@@ -33,6 +34,7 @@ const  AboutSection = () =>{
                         <li>-Bootstrap</li>
                     </ul>
                     <ul className="mr-2"> <li><b>Backend</b></li>
+                        
                         <li>-NodeJS</li>
                         <li>-Express</li>
                         <li>-Django</li>
@@ -72,8 +74,11 @@ const  AboutSection = () =>{
             id:'experience',
             content : (
                 <ul className="list-disc pl-2">
-                    <li className="list-none">professional experience :</li>
+                    <li className="list-none">experience :</li>
+                    <li>Participant in DevHunt 4.0</li>
+                    <li>4th place in DevHunt 5.0</li>
                     <li>1 september - 24 november 2024 : I am an IT intern at Aquarelle Madagascar </li>
+                    <li className="list-none">Hackathon :</li>
                 </ul>
             )
         },
@@ -115,6 +120,7 @@ const  AboutSection = () =>{
             <TabButton selectTab={()=>handleTabChange('skills')} active={tab === 'skills'} > {""}Skills{""} </TabButton>
             <TabButton selectTab={()=>handleTabChange('Tools')} active={tab === 'Tools'} > {""}Tools{""} </TabButton> 
             <TabButton selectTab={()=>handleTabChange('experience')} active={tab === 'experience'} > {""}experience{""} </TabButton> 
+            <TabButton selectTab={()=>handleTabChange('OS')} active={tab === 'OS'} > {""}OS{""} </TabButton>
             </div>
             <div className="mt-8">
             { TAB_DATA.find((t) => t.id === tab).content }

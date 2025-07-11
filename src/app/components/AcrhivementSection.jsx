@@ -7,8 +7,9 @@ import { useInView } from 'react-intersection-observer';
 const AchievementList = [
   { id: 1, metric: "Developer", value: 'Web'},
   { id: 2, metric: "Developer", value: 'Mobil'},
-  { id: 3, metric: "Awards", value: 10 },
-  { id: 4, metric: "Years", value: 3 },
+  { id: 3, metric: "Administrator", value: 'System ' },
+  { id: 4, metric: "Administrator", value: 'Network ' },
+  { id: 5, metric: "Years", value: 3 },
 ];
 
 // Composant pour animer un nombre
@@ -31,7 +32,7 @@ const AnimatedNumber = ({ value }) => {
       ref={ref}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={controls}
-      className='text-white text-xl lg:text-4xl font-bold'
+      className='text-white text-lg lg:text-4xl font-bold'
     >
       {value}
     </motion.span>
@@ -40,16 +41,16 @@ const AnimatedNumber = ({ value }) => {
 
 const AchievementSection = () => {
   return (
-    <div className='py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
-      <div className='border-[#33353f] border rounded-md py-8 px-17 flex flex-row items-center justify-between'>
+    <div className='py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 '>
+      <div className='border-[#33353f] border rounded-md py-8 px-17 grid grid-cols-2 sm:grid-cols-3 gap-4 lg:flex flex-row items-center justify-between '>
         {AchievementList.map((achievement) => (
           <div key={achievement.id} className='flex flex-col items-center justify-center mx-4'>
-            <h2 className='text-white lg:text-xl font-bold'>
+            <h2 className='text-white lg:text-xl font-bold text-[10px]'>
               {achievement.prefix}{' '}
               <AnimatedNumber value={achievement.value} />
               {achievement.prefix}
             </h2>
-            <p className='text-[#adb7be6c] text-base'>{achievement.metric}</p>
+            <p className='text-[#adb7be6c] lg:text-base text-sm'>{achievement.metric}</p>
           </div>
         ))}
       </div>

@@ -16,7 +16,7 @@ import Link from 'next/link'
         initial={{y:-100,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{duration:1}}
-        > <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#053545] via-[#179BB0] to-[#86Cdd9]'>Hi, I'm {" "}</span>
+        > <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-Tersary'>Hi, I'm {" "}</span>
         <br/>
         <TypeAnimation
       sequence={[
@@ -33,7 +33,7 @@ import Link from 'next/link'
     /> </motion.h1>
         <div >
             
-            <motion.button className='px-6 py-3 w-full sm:w-fit  rounded-full mr-4 bg-gradient-to-br from-[#053545] via-[#179BB0] to-[#86Cdd9] hover:text-black text-white'
+            <motion.button className='px-6 py-3 w-full sm:w-fit  rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-Tersary hover:text-black text-white'
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -42,7 +42,7 @@ import Link from 'next/link'
             }}
             >Hire Me</motion.button>
             <motion.button className='px-1 py-3 w-full sm:w-fit rounded-full bg-gradient-to-br
-             from-[#053545] via-[#179BB0] to-[#86Cdd9] hover:bg-slate-800 mt-5'
+             from-primary via-secondary to-Tersary hover:bg-slate-800 mt-5'
              initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -50,11 +50,11 @@ import Link from 'next/link'
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
              >
-            <span className='text-white bg-[#121212] hover:bg-slate-800 rounded-full px-20  lg:px-5 py-3 '><Link href='/CVAntonioClaret.pdf'>Download CV</Link></span></motion.button>
+            <span className='text-white bg-[#121212] hover:bg-slate-800 rounded-full px-20  lg:px-5 py-3 '><a href='/CVAntonioClaret.pdf' download>Download CV</a></span></motion.button>
         </div>
         </div>
         <div className='col-span-5 place-self-center mt-4 lg:mt-0 ml-4 ' >
-            <motion.div className='outline outline-4 outline-offset-4 outline-[#179bb0]  rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] relative mt-9 lg:mt-0 mb-4 lg:mb-0  overflow-hidden'
+            <motion.div className='outline outline-4 outline-offset-4 outline-Tersary  rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] relative mt-9 lg:mt-0 mb-4 lg:mb-0  overflow-hidden'
             initial={{x:150 ,opacity:0}}
             animate={{x:0,opacity:1}}
             transition={{duration:1}}

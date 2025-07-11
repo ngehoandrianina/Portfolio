@@ -64,7 +64,7 @@ const Navbar = () => {
                             </li>
                         ))
                     }
-                    <motion.ul className=' cursor-pointer px-6 py-2 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#053545] via-[#179BB0] to-[#86Cdd9] hover:bg-slate-800 text-white'
+                    <motion.ul className=' cursor-pointer px-6 py-2 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-Tersary hover:bg-slate-800 text-white'
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
