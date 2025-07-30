@@ -17,19 +17,28 @@ const ProjectCard = ({imgUrl,title,decription,gitUrl,previewUrl,outil}) => {
             -translate-y-1/2 
              cursor-pointer group-hover/link:text-white'  />
         </Link>
-        <div onClick={()=>setShow(true)} className='h-14 w-14 border-2 relative rounded-full border-[#adb7be] hover:border-white group/link '>
+        {/* <div onClick={()=>setShow(true)} className='h-14 w-14 border-2 relative rounded-full border-[#adb7be] hover:border-white group/link '>
             <EyeIcon className=' h-10 w-10 text-[#adb7be]  absolute top-1/2 left-1/2 transform -translate-x-1/2 
             -translate-y-1/2 
              cursor-pointer group-hover/link:text-white' />
-        </div>
+        </div> */}
         </div>
       </div>
       <div className='text-white rounded-b-xl mt-3 bg-[#1181818] py-6 px-4'>
         <h5 className='text-xl font-semibold  '>{title}</h5>
         <p className='text-[#adb7be]'>{decription}</p>
+        <div className='mt-4 flex gap-2 flex-wrap'>
+          {
+            outil.map((item,idx)=>(
+              <p key={idx} className=' px-2 w-fit rounded-xl bg-gradient-to-br from-secondary via-primary to-Tersary'>{item}</p>
+            ))
+          }
+       
+        </div>
+        
       </div>
       </div>
-      <ViewProjet setShow={setShow} show={Show} image={imgUrl} name={title} desc={decription} otl={outil} />
+      {/* <ViewProjet setShow={setShow} show={Show} image={imgUrl} name={title} desc={decription} otl={outil} /> */}
     </>
   )
 }
