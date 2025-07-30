@@ -12,7 +12,7 @@ import Link from 'next/link'
     <section  className=''>
     <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-7 place-self-center text-center sm:text-left justify-self-start'> 
-        <motion.h1 className='tex-white mb-4 text-4xl lg:text-6xl lg:leading-normal font-extrabold'
+        <motion.h1 className='text-white mb-4 text-4xl lg:text-6xl lg:leading-normal font-extrabold'
         initial={{y:-100,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{duration:1}}

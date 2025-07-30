@@ -11,7 +11,7 @@ export default function Home() {
   const [islight,SetLight] = useState(false)
   return (
     <>
-    <main className=" overflow-hidden  flex min-h-screen flex-col  dark:bg-[#150404] bg-light scroll-smooth" >
+    <main className=" overflow-hidden  flex min-h-screen flex-col dark:bg-[#150404] bg-dark scroll-smooth" >
     <Navbar/>
     <div className="container mt-24 mx-auto px-12 py-4">
     <div>
