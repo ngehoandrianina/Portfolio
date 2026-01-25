@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Projet Spring Boot",
-        "description" :"This project is an project academic",
+        "description" :"TThis is an academic project focused on customer management in a banking system. The project aims to manage client information efficiently and securely within a bank environment.",
         "image" : "/image/Projects/jsp.png",
         "tag" : ["All","Web"],
         "gitUtl":"https://github.com/ngehoandrianina/ClaretRepository.git",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "title": "Project Node Js",
-        "description" :"Project academic",
+        "description" :"This is an academic project focused on customer management in a banking system. The project aims to manage client information efficiently and securely within a bank environment",
         "image" : "/image/Projects/Node.png",
         "tag" : ["All","Web"],
         "gitUtl":"https://github.com/ngehoandrianina/NodeProjet.git",
@@ -23,7 +23,7 @@
     {
         "id": 3,
         "title": "Shess game local",
-        "description" :"This an project personal",
+        "description" :"Chess Local is an academic project that allows players to play chess locally. The project was developed to practice and understand WebSocket communication, enabling real-time interaction between players",
         "image" : "/image/Projects/echec.png",
         "tag" : ["All","Web"],
         "gitUtl":"https://github.com/ngehoandrianina/ChessLocal.git",
@@ -33,7 +33,7 @@
     {
         "id": 4,
         "title": "My porftolio",
-        "description" :"this project is my personal project",
+        "description" :"I created this portfolio to showcase all my achievements and projects throughout my academic and professional journey. It is a personal project designed to highlight my skills, experiences, and growth in the field of computer science.",
         "image" : "/image/Projects/portfolio.png",
         "tag" : ["All","Web"],
         "gitUtl":"https://github.com/ngehoandrianina/Portfolio.git",
@@ -43,12 +43,22 @@
     {
         "id": 5,
         "title": "Schedule management",
-        "description" :"this project is my personal project",
+        "description" :"Schedule Management is a personal project that I designed and deployed for my own use in order to organize my daily activities and track the progress of my personal and academic projects.This application provides daily reminders of tasks to be completed and highlights the most urgent projects and deadlines, helping me stay organized, focused, and productive.",
         "image" : "/image/Projects/shd2.jpg",
         "tag" : ["All","Mobil"],
         "gitUtl":"#",
         "previewUrl":"/",
         "outils":["React Native","SQLite"]
+    },
+    {
+        "id": 6,
+        "title": "MedAccess",
+        "description" :"It is a project to centralize healthcare actors within a single system. The system allows users to book appointments and view healthcare facilities and practitioners. This project is part of an internship at NEOTIK Corporation.",
+        "image" : "/image/Projects/madoc.png",
+        "tag" : ["All","web"],
+        "gitUtl":"#",
+        "previewUrl":"/",
+        "outils":["NextJs","NestJs","Prisma","Mysql"]
     }
   
 ]

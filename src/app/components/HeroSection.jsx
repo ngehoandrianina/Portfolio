@@ -11,6 +11,7 @@ import Link from 'next/link'
     return (
     <section  className=''>
     <div className='grid grid-cols-1 sm:grid-cols-12'>
+        <div className='absolute w-32 h-32 bg-gradient-to-t from-primary to-secondary rounded-full blur-2xl bottom-12 left-12' ></div>
         <div className='col-span-7 place-self-center text-center sm:text-left justify-self-start'> 
         <motion.h1 className='text-white mb-4 text-4xl lg:text-6xl lg:leading-normal font-extrabold'
         initial={{y:-100,opacity:0}}
@@ -33,14 +34,14 @@ import Link from 'next/link'
     /> </motion.h1>
         <div >
             
-            <motion.button className='px-6 py-3 w-full sm:w-fit  rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-Tersary hover:text-black text-white'
+            <motion.button className='px-6 py-3 w-full sm:w-fit  rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-Tersary hover:bg-gradient-to-tr hover:shadow-primary shadow-lg text-white'
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
                 duration: 1,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
-            >Hire Me</motion.button>
+            >View Project</motion.button>
             <motion.button className='px-1 py-3 w-full sm:w-fit rounded-full bg-gradient-to-br
              from-primary via-secondary to-Tersary hover:bg-slate-800 mt-5'
              initial={{ opacity: 0, scale: 0 }}
@@ -59,7 +60,7 @@ import Link from 'next/link'
             animate={{x:0,opacity:1}}
             transition={{duration:1}}
             >
-            <Image src='/image/iah3.jpg' alt='hero'
+            <Image src='/image/CEO.png' alt='hero'
              width={500} height={500} priority
              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-3xl'  />
             </motion.div>

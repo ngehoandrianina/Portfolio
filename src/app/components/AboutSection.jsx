@@ -13,6 +13,7 @@ const  AboutSection = () =>{
             id:'Education',
             content : (
                 <ul className="list-disc pl-2">
+                    <li><b>2025 - </b>professional bachelor</li>
                     <li><b>2025 - </b>3 year of professional bachelor</li>
                     <li><b>2023-2024 - </b>2 year of professional bachelor </li>
                     <li><b>2022-2023 - </b>1st year of professional bachelor</li>
@@ -75,10 +76,10 @@ const  AboutSection = () =>{
             content : (
                 <ul className="list-disc pl-2">
                     <li className="list-none">experience :</li>
+                    <li>developer inter NEOTIK Corporation</li>
                     <li>Participant in DevHunt 4.0</li>
                     <li>4th place in DevHunt 5.0</li>
                     <li>1 september - 24 november 2024 : I am an IT intern at Aquarelle Madagascar </li>
-                    <li className="list-none">Hackathon :</li>
                 </ul>
             )
         },
@@ -100,7 +101,7 @@ const  AboutSection = () =>{
     ]
     return(
         <section className="text-white ">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16  sm:py-16 xl:px-16 "> 
+            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16  sm:py-16 xl:px-16 w-[100%] "> 
                 <Cassroll >
                     {
                         image.map((image,index)=>(
@@ -110,24 +111,31 @@ const  AboutSection = () =>{
                 </Cassroll>
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full ">
                     <h2 className="text-4xl font-bold text-white mb-4">About me</h2>
-                    <p className="text-base lg:text-lg ">I am curently in my third year of professional bachelor's degree at the Ecole Nationale d'Informatique ENI, following thw General Computer Science program.
-                    this program focuses on two main areas: System and Network Administration and Software Engineering with Database. <br></br> <br></br>
-                    Over the past three years, I have specialized in Computer Science through both my coursework and personal research. <br></br> <br></br>
-                    At 21 years old, I am passionate about moderne technologies and aspire to accomplish innovative projects, whether in networking,development,or programming.<br></br> <br></br>
-                    I continue to progress step by step in this field, with the determination to deepen my knowledge and take on new challenges.</p>
-            <div className="flex flex-row justify-start mt-8">
+                    <p className="text-base lg:text-lg ">I hold a Professional Bachelor’s degree (Licence Professionnelle) in Computer Science from the École Nationale d’Informatique (ENI), where I completed the General Computer Science program. 
+                    
+ This program focused on two main areas: System and Network Administration and Software Engineering with Databases. <br/> <br/>
+
+Throughout my academic journey, I have strengthened my computer science skills through both structured coursework and personal research, allowing me to build a solid and well-rounded technical foundation. <br/> <br/>
+
+At 21 years old, I am passionate about modern technologies and highly motivated to work on innovative projects in networking, software development, and programming.
+
+I continue to progress step by step in this field with strong determination, aiming to deepen my knowledge, enhance my technical skills, and take on new challenges.</p>
+            
+        </div>
+       
+            </div>
+            <div className="w-full flex flex-col items-center justify-center">
+        <div className="flex flex-row justify-start mt-8">
             <TabButton selectTab={()=>handleTabChange('Education')} active={tab === 'Education'} > {""}Education{""} </TabButton>
             <TabButton selectTab={()=>handleTabChange('skills')} active={tab === 'skills'} > {""}Skills{""} </TabButton>
             <TabButton selectTab={()=>handleTabChange('Tools')} active={tab === 'Tools'} > {""}Tools{""} </TabButton> 
             <TabButton selectTab={()=>handleTabChange('experience')} active={tab === 'experience'} > {""}experience{""} </TabButton> 
             <TabButton selectTab={()=>handleTabChange('OS')} active={tab === 'OS'} > {""}OS{""} </TabButton>
-            </div>
+        </div>
             <div className="mt-8">
             { TAB_DATA.find((t) => t.id === tab).content }
             </div>
-                </div>
-
-            </div>
+        </div>
         </section>
     )
 }

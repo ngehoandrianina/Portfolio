@@ -9,7 +9,7 @@ const AchievementList = [
   { id: 2, metric: "Developer", value: 'Mobil'},
   { id: 3, metric: "Administrator", value: 'System ' },
   { id: 4, metric: "Administrator", value: 'Network ' },
-  { id: 5, metric: "Years", value: 3 },
+  { id: 5, metric: "Years", value: 4 },
 ];
 
 // Composant pour animer un nombre
@@ -41,7 +41,7 @@ const AnimatedNumber = ({ value }) => {
 
 const AchievementSection = () => {
   return (
-    <div className='py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 '>
+    <motion.div initial={{width:0}} animate={{width:1200}} className='py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 '>
       <div className='border-[#33353f] border rounded-md py-8 px-17 grid grid-cols-2 sm:grid-cols-3 gap-4 lg:flex flex-row items-center justify-between '>
         {AchievementList.map((achievement) => (
           <div key={achievement.id} className='flex flex-col items-center justify-center mx-4'>
@@ -54,7 +54,7 @@ const AchievementSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

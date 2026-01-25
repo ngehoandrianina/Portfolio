@@ -7,12 +7,12 @@ const ViewProjet = ({show,setShow,image,desc,name,otl}) => {
     { 
       show &&
 
-    <div className='bg-[#00000072] px-6 h-screen w-screen fixed top-0 left-0 z-50 flex flex-col lg:flex-row items-center justify-center'>
-    <div className='bg-[#f0f5f7] w-full lg:w-[1000px] overflow-scroll  flex flex-col relative lg:flex-row justify-center items-center h-[500px] rounded-xl p-4'>
+    <div className='bg-[#00000072] px-6 backdrop-blur-sm h-screen w-screen fixed top-0 left-0 z-50 flex flex-col lg:flex-row items-center justify-center'>
+    <div className='bg-[#f0f5f7] w-full lg:w-[1000px] overflow-scroll md:gap-12  flex flex-col relative lg:flex-row justify-center items-center h-[500px] rounded-xl p-4'>
         <img src={image} className='w-60 lg:w-[400px]  rounded-lg flex ' />
         <div className='ml-4 mt-2 lg:mt-0 text-black flex flex-col w-full  lg:w-96 h-96  overflow-scroll no-scroll'>
         <div>
-            <h1 className='font-sans'>{name}</h1>
+            <h1 className='font-sans text-xl font-bold mb-4'>{name}</h1>
             <h1 className='font-sans'>Description:</h1>
             <p className='font-light font-sans text-[12px] lg:text-[14px] '>{desc}</p>
         </div>
