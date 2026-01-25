@@ -7,7 +7,6 @@ import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AcrhivementSection from "./components/AcrhivementSection";
 import { useState } from "react";
-import Skills from "./components/skills";
 import { motion } from "framer-motion";
 import SkillsSection from "./components/SkillsSection";
 export default function Home() {
