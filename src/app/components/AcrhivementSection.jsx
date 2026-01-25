@@ -41,7 +41,7 @@ const AnimatedNumber = ({ value }) => {
 
 const AchievementSection = () => {
   return (
-    <motion.div initial={{width:0}} animate={{width:1200}} className='py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 '>
+    <motion.div  className='py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 '>
       <div className='border-[#33353f] border rounded-md py-8 px-17 grid grid-cols-2 sm:grid-cols-3 gap-4 lg:flex flex-row items-center justify-between '>
         {AchievementList.map((achievement) => (
           <div key={achievement.id} className='flex flex-col items-center justify-center mx-4'>
