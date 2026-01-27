@@ -9,6 +9,7 @@ import AcrhivementSection from "./components/AcrhivementSection";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SkillsSection from "./components/SkillsSection";
+import ExperienceSection from "./components/Sections/Experience";
 export default function Home() {
   const [islight,SetLight] = useState(false)
   return (
@@ -25,7 +26,10 @@ export default function Home() {
     <motion.div  id="about">
       <AboutSection/>
     </motion.div>
-    <div>
+    <div id="Experience">
+      <ExperienceSection />
+    </div>
+    <div id="Skills">
       <SkillsSection />
     </div>
     <div id="Projects">

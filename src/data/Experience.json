@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "Title":"developer inter ",
+        "Date":"2 septembre 2025 - 22 novembre 2025",
+        "Address":"NEOTIK Corporation"
+    },
+    {
+        "id":2,
+        "Title":"4th place in DevHunt 5.0",
+        "Date":"2025",
+        "Address":"Ecole National d'Informatique"
+    },
+    {
+        "id":3,
+        "Title":"Participant in DevHunt 4.0",
+        "Date":"2025",
+        "Address":"Ecole National d'Informatique"
+    },
+    {
+        "id":4,
+        "Title":"IT intern",
+        "Date":"1 september - 24 november 2024",
+        "Address":"Aquarelle Madagascar"
+    }
+
+]

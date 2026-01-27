@@ -3,7 +3,7 @@ import react,{useTransition,useState} from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import Cassroll from "./Cassroll";
-
+import { motion, } from "framer-motion";
 
 
 const  AboutSection = () =>{
@@ -101,7 +101,7 @@ const  AboutSection = () =>{
     ]
     return(
         <section className="text-white ">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16  sm:py-16 xl:px-16 w-[100%] "> 
+            <div  className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16  sm:py-16 xl:px-16 w-[100%] "> 
                 <Cassroll >
                     {
                         image.map((image,index)=>(
@@ -110,8 +110,8 @@ const  AboutSection = () =>{
                     }
                 </Cassroll>
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full ">
-                    <h2 className="text-4xl font-bold text-white mb-4">About me</h2>
-                    <p className="text-base lg:text-lg ">I hold a Professional Bachelor’s degree (Licence Professionnelle) in Computer Science from the École Nationale d’Informatique (ENI), where I completed the General Computer Science program. 
+                    <motion.h2 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className="text-4xl font-bold text-white mb-4">About me</motion.h2>
+                    <motion.p initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className="text-base lg:text-lg ">I hold a Professional Bachelor’s degree (Licence Professionnelle) in Computer Science from the École Nationale d’Informatique (ENI), where I completed the General Computer Science program. 
                     
  This program focused on two main areas: System and Network Administration and Software Engineering with Databases. <br/> <br/>
 
@@ -119,12 +119,12 @@ Throughout my academic journey, I have strengthened my computer science skills t
 
 At 21 years old, I am passionate about modern technologies and highly motivated to work on innovative projects in networking, software development, and programming.
 
-I continue to progress step by step in this field with strong determination, aiming to deepen my knowledge, enhance my technical skills, and take on new challenges.</p>
+I continue to progress step by step in this field with strong determination, aiming to deepen my knowledge, enhance my technical skills, and take on new challenges.</motion.p>
             
         </div>
        
             </div>
-            <div className="w-full flex flex-col items-center justify-center">
+            {/* <div className="w-full flex flex-col items-center justify-center">
         <div className="flex flex-row justify-start mt-8">
             <TabButton selectTab={()=>handleTabChange('Education')} active={tab === 'Education'} > {""}Education{""} </TabButton>
             <TabButton selectTab={()=>handleTabChange('skills')} active={tab === 'skills'} > {""}Skills{""} </TabButton>
@@ -135,7 +135,7 @@ I continue to progress step by step in this field with strong determination, aim
             <div className="mt-8">
             { TAB_DATA.find((t) => t.id === tab).content }
             </div>
-        </div>
+        </div> */}
         </section>
     )
 }

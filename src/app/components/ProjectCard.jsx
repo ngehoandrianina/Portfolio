@@ -3,12 +3,12 @@ import { useState } from 'react'
 import { CodeBracketIcon,EyeIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import ViewProjet from './ViewProjet'
-
+import { motion } from 'framer-motion'
 const ProjectCard = ({imgUrl,title,decription,gitUrl,previewUrl,outil}) => {
   const [Show,setShow] = useState(false)
   return (
     <>
-      <div>
+      <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}}>
       
       <div className='h-52 md:h-80 md:w-96 rounded-t-xl relative group ' style={{ background: `url(${imgUrl})`,backgroundSize: 'cover'}}>
         <div className='overlay items-center rounded-t-xl justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex 
@@ -39,7 +39,7 @@ const ProjectCard = ({imgUrl,title,decription,gitUrl,previewUrl,outil}) => {
         </div>
         
       </div>
-      </div>
+      </motion.div>
       <ViewProjet setShow={setShow} show={Show} image={imgUrl} name={title} desc={decription} otl={outil} />
     </>
   )

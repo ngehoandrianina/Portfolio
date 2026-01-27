@@ -16,6 +16,14 @@ const navLink = [
         href: "#about",
     },
     {
+        title: "Experience",
+        href: "#Experience",
+    },
+    {
+        title: "Skills",
+        href: "#Skills",
+    },
+    {
         title: "Projects",
         href: "#Projects",
     },
@@ -33,13 +41,13 @@ const Navbar = () => {
         restDelta: 0.001,
     })
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121211] backdrop-blur-sm bg-opacity-90">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121112] backdrop-blur-sm bg-opacity-90">
         <motion.div id="scroll-indication" style={{scaleX,position:"fixed",top: 0,
                     left: 0,
                     right: 0,
                     height: 10,
                     originX: 0,
-                    backgroundColor: "#179BB0",}}/>
+                    backgroundColor: "#a72bd0",}}/>
         <div className="flex flex-wrap  items-center justify-between mx-auto p-3">
             <Link href={"/"} className="ml-10" style={{fontFamily:'fantasy'}}><Image src='/image/logoNG.png' alt="iah" className="rounded-xl"  width={50} height={150} /> </Link>
             <div className="mobil-menu block md:hidden">

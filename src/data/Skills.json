@@ -1,0 +1,18 @@
+[
+    {
+        "WebTechnologies":[
+            {
+                "Title":"HTML",
+                "Logo":"/logo/html.png"
+            },
+            {
+                "Title":"CSS",
+                "Logo":"/logo/css.png"
+            },
+            {
+                "Title":"JAVASCRIPT",
+                "Logo":"/logo/js.png"
+            }
+        ]
+    }
+]

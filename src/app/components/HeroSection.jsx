@@ -5,7 +5,11 @@ import { TypeAnimation } from 'react-type-animation';
 import { useEffect,useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link'
-
+import githubIcon from '../../../public/image/github.png'
+import FacebookIcon from '../../../public/image/icons8_facebook.png'
+import LinkDIncon from '../../../public/image/icons8_linkedin.png'
+import WhatsappIcon from '../../../public/image/whatsapp.png'
+import Gmail from '../../../public/image/icons8_gmail.png'
  const HeroSection = () => {
 
     return (
@@ -33,7 +37,6 @@ import Link from 'next/link'
       repeat={Infinity}
     /> </motion.h1>
         <div >
-            
             <motion.button className='px-6 py-3 w-full sm:w-fit  rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-Tersary hover:bg-gradient-to-tr hover:shadow-primary shadow-lg text-white'
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -41,7 +44,7 @@ import Link from 'next/link'
                 duration: 1,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
-            >View Project</motion.button>
+            ><Link href={'#Projects'} > View Project </Link></motion.button>
             <motion.button className='px-1 py-3 w-full sm:w-fit rounded-full bg-gradient-to-br
              from-primary via-secondary to-Tersary hover:bg-slate-800 mt-5'
              initial={{ opacity: 0, scale: 0 }}
@@ -52,6 +55,13 @@ import Link from 'next/link'
             }}
              >
             <span className='text-white bg-[#121212] hover:bg-slate-800 rounded-full px-20  lg:px-5 py-3 '><a href='/CVAntonioClaret.pdf' download>Download CV</a></span></motion.button>
+            <motion.div initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} className='socials flex flex-row items-center justify-center md:justify-start gap-2 mt-6'>
+            <Link href="https://github.com/ngehoandrianina"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
+            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
+            <Link href="https://www.facebook.com/claretanthoonio/"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
+            <Link href="https://wa.me/261340760917"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
+            <Link href="mailto:antonioclaret2004@gmail.com"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
+            </motion.div>
         </div>
         </div>
         <div className='col-span-5 place-self-center mt-4 lg:mt-0 ml-4 ' >
