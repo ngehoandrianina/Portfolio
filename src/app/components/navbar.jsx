@@ -10,7 +10,8 @@ import {motion, useScroll,useSpring } from "framer-motion";
 const navLink = [
     {
         title: "Home",
-        href: "#Home",},
+        href: "#Home",
+    },
     {
         title: "About",
         href: "#about",

@@ -122,18 +122,6 @@ const  AboutSection = () =>{
         </div>
        
             </div>
-            {/* <div className="w-full flex flex-col items-center justify-center">
-        <div className="flex flex-row justify-start mt-8">
-            <TabButton selectTab={()=>handleTabChange('Education')} active={tab === 'Education'} > {""}Education{""} </TabButton>
-            <TabButton selectTab={()=>handleTabChange('skills')} active={tab === 'skills'} > {""}Skills{""} </TabButton>
-            <TabButton selectTab={()=>handleTabChange('Tools')} active={tab === 'Tools'} > {""}Tools{""} </TabButton> 
-            <TabButton selectTab={()=>handleTabChange('experience')} active={tab === 'experience'} > {""}experience{""} </TabButton> 
-            <TabButton selectTab={()=>handleTabChange('OS')} active={tab === 'OS'} > {""}OS{""} </TabButton>
-        </div>
-            <div className="mt-8">
-            { TAB_DATA.find((t) => t.id === tab).content }
-            </div>
-        </div> */}
         </section>
     )
 }

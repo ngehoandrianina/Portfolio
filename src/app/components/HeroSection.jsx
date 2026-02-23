@@ -56,11 +56,11 @@ import Gmail from '../../../public/image/icons8_gmail.png'
              >
             <span className='text-white bg-[#121212] hover:bg-slate-800 rounded-full px-20  lg:px-5 py-3 '><a href='/CVAntonioClaret.pdf' download>Download CV</a></span></motion.button>
             <motion.div initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} className='socials flex flex-row items-center justify-center md:justify-start gap-2 mt-6'>
-            <Link href="https://github.com/ngehoandrianina"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
-            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
-            <Link href="https://www.facebook.com/claretanthoonio/"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
-            <Link href="https://wa.me/261340760917"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
-            <Link href="mailto:antonioclaret2004@gmail.com"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
+            <Link href="https://github.com/ngehoandrianina" target="_blank"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
+            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/" target="_blank"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
+            <Link href="https://www.facebook.com/claretanthoonio/" target="_blank"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
+            <Link href="https://wa.me/261340760917" target="_blank"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
+            <Link href="mailto:antonioclaret2004@gmail.com" target="_blank"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
             </motion.div>
         </div>
         </div>
