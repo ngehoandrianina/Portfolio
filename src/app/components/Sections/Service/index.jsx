@@ -7,107 +7,38 @@ import { motion } from "framer-motion";
 import ServiceCard from "../../Container/ServiceCard";
 
 const AboutSection = () => {
-  const TAB_DATA = [
+  const Service = [
     {
-      title: "Education",
-      id: "Education",
-      content: (
-        <ul className="list-disc pl-2">
-          <li>
-            <b>2025 - </b>professional bachelor
-          </li>
-          <li>
-            <b>2025 - </b>3 year of professional bachelor
-          </li>
-          <li>
-            <b>2023-2024 - </b>2 year of professional bachelor{" "}
-          </li>
-          <li>
-            <b>2022-2023 - </b>1st year of professional bachelor
-          </li>
-          <li>
-            <b>2022 - </b>BACC series S with Fairly Good
-          </li>
-        </ul>
-      ),
+      "lienimage": "/image/service/FullStack.jpg",
+      "Titre": "Full-Stack Web Development",
+      "Description": "Design and develop complete web applications using modern technologies such as React, Node.js, and REST APIs. From frontend interfaces to backend systems and databases."
     },
     {
-      title: "skills",
-      id: "skills",
-      content: (
-        <ul className="list-disc pl-2 flex">
-          <ul className="mr-2">
-            {" "}
-            <li>
-              <b>Fronted</b>
-            </li>
-            <li>-React native</li>
-            <li>-ReactJS</li>
-            <li>-NextJS</li>
-            <li>-HTML</li>
-            <li>-tailwindcss</li>
-            <li>-Bootstrap</li>
-          </ul>
-          <ul className="mr-2">
-            {" "}
-            <li>
-              <b>Backend</b>
-            </li>
-            <li>-NodeJS</li>
-            <li>-Express</li>
-            <li>-Django</li>
-            <li>-Flask</li>
-            <li>-Fast API</li>
-          </ul>
-          <ul>
-            {" "}
-            <li>
-              <b>DBMS</b>
-            </li>
-            <li>-Mysql</li>
-            <li>-Postgresql</li>
-          </ul>
-        </ul>
-      ),
+      "lienimage": "/image/service/Frontend2.jpg",
+      "Titre": "Frontend Development",
+      "Description": "Create responsive and interactive user interfaces using HTML, CSS, JavaScript, React, and modern UI frameworks to deliver a smooth user experience."
     },
     {
-      title: "Tools",
-      id: "Tools",
-      content: (
-        <ul className="list-disc pl-2">
-          <li>Vs Code</li>
-          <li>Netbeans</li>
-          <li>Xammp</li>
-        </ul>
-      ),
+      "lienimage": "/image/service/Backend.jpg",
+      "Titre": "Backend Development",
+      "Description": "Build secure and scalable backend systems using technologies like Node.js, Django, or .NET, including API development and database integration."
     },
     {
-      title: "OS",
-      id: "OS",
-      content: (
-        <ul className="list-disc pl-2">
-          <li>Unix</li>
-          <li>Windows</li>
-        </ul>
-      ),
+      "lienimage": "/image/service/Database.jpg",
+      "Titre": "Database Design",
+      "Description": "Design and optimize relational and NoSQL databases such as MySQL, PostgreSQL, and MongoDB to ensure efficient data storage and retrieval."
     },
     {
-      title: "experience",
-      id: "experience",
-      content: (
-        <ul className="list-disc pl-2">
-          <li className="list-none">experience :</li>
-          <li>developer inter NEOTIK Corporation</li>
-          <li>Participant in DevHunt 4.0</li>
-          <li>4th place in DevHunt 5.0</li>
-          <li>
-            1 september - 24 november 2024 : I am an IT intern at Aquarelle
-            Madagascar{" "}
-          </li>
-        </ul>
-      ),
+      "lienimage": "/image/service/Api.jpg",
+      "Titre": "API Development & Integration",
+      "Description": "Develop RESTful APIs and integrate third-party services to enable communication between applications and external platforms."
     },
-  ];
+    {
+      "lienimage": "/image/service/Maintenance.jpg",
+      "Titre": "Web Application Maintenance",
+      "Description": "Provide maintenance, performance optimization, bug fixing, and updates to ensure applications remain secure and efficient."
+    }
+  ]
   const [tab, setTab] = useState("skills");
   const [Ispending, StartTransition] = useTransition();
 
@@ -138,7 +69,7 @@ const AboutSection = () => {
             viewport={{ margin: "-100px" }}
             className="text-4xl font-bold text-white mb-4 text-center"
           >
-            My service
+            What I Can Do
           </motion.h2>
           {/* <motion.p
             initial={{ opacity: 0, y: 50 }}
@@ -159,10 +90,11 @@ const AboutSection = () => {
             impactful applications.
           </motion.p> */}
           <div className="flex gap-8 flex-wrap justify-center">
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
+              {
+                Service.map((service,idx)=>(
+                  <ServiceCard key={idx} image={service.lienimage} title={service.Titre} Description={service.Description} />
+                ))
+              }
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+  scroll-padding-top: 90px;
 }
 
 @media (prefers-color-scheme: dark) {

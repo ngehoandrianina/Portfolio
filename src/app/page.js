@@ -11,16 +11,20 @@ import { motion } from "framer-motion";
 import SkillsSection from "./components/Sections/Skills";
 import ExperienceSection from "./components/Sections/Experience";
 import ParticlesBackground from "./components/Container/Partialjs";
+import BackGound from "./components/Container/Partialjs";
 export default function Home() {
   const [islight, SetLight] = useState(false);
+  const [hero,sethero] = useState(true)
   return (
     <>
-      <ParticlesBackground />
+      
       <main className=" overflow-hidden  flex min-h-screen flex-col dark:bg-[#150404] bg-dark scroll-smooth">
-        <Navbar />
+        <Navbar heroVisible={hero} />
+        
         <div className="container mt-24 mx-auto px-12 py-4">
+   
           <div>
-            <HeroSection id="Home" />
+            <HeroSection id="Home" setHero={sethero} />
           </div>
           {/* <div>
       <AcrhivementSection />

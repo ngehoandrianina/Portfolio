@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import githubIcon from "../../../../../public/image/github.png";
 import FacebookIcon from "../../../../../public/image/icons8_facebook.png";
@@ -11,11 +11,21 @@ import LinkDIncon from "../../../../../public/image/icons8_linkedin.png";
 import WhatsappIcon from "../../../../../public/image/whatsapp.png";
 import Gmail from "../../../../../public/image/icons8_gmail.png";
 import ParticlesBackground from "../../Container/Partialjs";
-const HeroSection = () => {
+import { ArrowDownCircleIcon } from "@heroicons/react/16/solid";
+
+const HeroSection = ({setHero}) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref)
+  useEffect(()=>{
+    if(window.innerWidth > 768){
+      setHero(isInView)
+    }
+  },[isInView])
   return (
-    <section className="h-dvh">
+    <section className="" ref={ref}>
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="absolute w-32 h-32 bg-gradient-to-t from-primary to-secondary rounded-full blur-2xl bottom-12 left-12"></div>
+       
         <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start">
           <motion.h1
             className="text-white mb-4 text-4xl lg:text-6xl lg:leading-normal font-extrabold"
@@ -135,6 +145,14 @@ const HeroSection = () => {
             />
           </motion.div>
         </div>
+        
+      </div>
+      <div className="flex items-center justify-center mt-16">
+        <Link href={'#about'}>
+        <motion.div initial={{y:-20}} animate={{y:0}} transition={{repeat:Infinity,duration:1,ease:"linear"}}  className="w-12">
+          <ArrowDownCircleIcon className="hover:scale-105 cursor-pointer" />
+        </motion.div>
+        </Link>
       </div>
     </section>
   );

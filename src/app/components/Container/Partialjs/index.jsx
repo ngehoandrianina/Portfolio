@@ -1,22 +1,20 @@
-"use client";
+import React from "react";
 
-import dynamic from "next/dynamic";
-
-const Particles = dynamic(() => import("@tsparticles/react"), {
-  ssr: false,
-});
-
-export default function ParticlesBackground() {
+const BackGound = ({ children }) => {
   return (
-    <Particles
-      options={{
-        fullScreen: { enable: true, zIndex: -1 },
-        particles: {
-          number: { value: 50 },
-          move: { enable: true, speed: 2 },
-          links: { enable: true },
-        },
+    <div
+      className="min-h-screen w-full"
+      style={{
+        backgroundImage: "url('/image/service/Background.jpg')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
       }}
-    />
+    >
+      {children}
+    </div>
   );
-}
+};
+
+export default BackGound;
