@@ -1,11 +1,11 @@
 "use client"
 import React from 'react'
 import { useState } from 'react'
-import githubIcon from '../../../public/image/github.png'
-import FacebookIcon from '../../../public/image/icons8_facebook.png'
-import LinkDIncon from '../../../public/image/icons8_linkedin.png'
-import WhatsappIcon from '../../../public/image/whatsapp.png'
-import Gmail from '../../../public/image/icons8_gmail.png'
+import githubIcon from '../../../../../public/image/github.png'
+import FacebookIcon from '../../../../../public/image/icons8_facebook.png'
+import LinkDIncon from '../../../../../public/image/icons8_linkedin.png'
+import WhatsappIcon from '../../../../../public/image/whatsapp.png'
+import Gmail from '../../../../../public/image/icons8_gmail.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import emailjs from 'emailjs-com'
@@ -49,11 +49,11 @@ const EmailSection = () => {
         {""}
         I'm curently available for new opportunity and open to any discussions. My inbox is always open. if you have any questions or would like to discus future project, I would be happy to share all my expertise and contribute to your initiatives.</motion.p>
         <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='socials flex flex-row gap-2'>
-            <Link href="https://github.com/ngehoandrianina"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
-            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
-            <Link href="https://www.facebook.com/claretanthoonio/"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
-            <Link href="https://wa.me/261340760917"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
-            <Link href="mailto:antonioclaret2004@gmail.com"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
+            <Link href="https://github.com/ngehoandrianina" target="_blank"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
+            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/" target="_blank"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
+            <Link href="https://www.facebook.com/claretanthoonio/" target="_blank"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
+            <Link href="https://wa.me/261340760917" target="_blank"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
+            <Link href="mailto:antonioclaret2004@gmail.com" target="_blank"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
         </motion.div>
       </div>
       <div>

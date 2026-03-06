@@ -17,9 +17,14 @@ html {
     --foreground: #ededed;
   }
 }
+canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
 
 body {
-  color: var(--foreground);
+ color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
