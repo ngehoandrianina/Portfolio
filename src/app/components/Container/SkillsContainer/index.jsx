@@ -9,11 +9,11 @@ const SkillsContainer = ({ src, value, Title }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       viewport={{ margin: "-100px" }}
-      className=" border border-gray-400 h-32 md:h-40 md:w-96 rounded-xl relative px-6 py-4 flex flex-col justify-evenly "
+      className=" h-8 md:h-12 md:w-[100%] rounded-xl relative flex flex-col justify-evenly space-y-2 "
     >
-      <div className="w-2 h-20 bg-secondary absolute -left-1 top-4 rounded"></div>
+   
       <div className="flex items-center gap-2">
-        <Image src={src} width={60} height={60} alt="logo" />
+        <Image src={src} width={28} height={12} alt="logo" />
         <p className="text-gray-300 font-bold">{Title}</p>
       </div>
       <ProgessBar value={value} />

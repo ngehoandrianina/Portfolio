@@ -16,7 +16,8 @@ const SkillsSection = () => {
       >
         My Skills
       </motion.h1>
-      <div>
+      <div className="flex flex-col md:flex-row w-full gap-12">
+      <div className="w-full">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +27,7 @@ const SkillsSection = () => {
         >
           Web Technologies
         </motion.h1>
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col gap-8 md:gap-4">
           <SkillsContainer src={"/logo/html.png"} value={95} Title={"HTML"} />
           <SkillsContainer src={"/logo/css.png"} value={80} Title={"CSS"} />
           <SkillsContainer
@@ -36,7 +37,7 @@ const SkillsSection = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="w-full">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +47,7 @@ const SkillsSection = () => {
         >
           Programming Languages
         </motion.h1>
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col gap-8 md:gap-4">
           <SkillsContainer
             src={"/logo/js.png"}
             value={80}
@@ -61,7 +62,9 @@ const SkillsSection = () => {
           <SkillsContainer src={"/logo/java.png"} value={50} Title={"JAVA"} />
         </div>
       </div>
-      <div>
+      </div>
+      <div className="flex flex-col md:flex-row w-full gap-12">
+      <div className="w-full">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +74,7 @@ const SkillsSection = () => {
         >
           Front-end Technologies
         </motion.h1>
-        <div className="flex flex-col flex-wrap md:flex-row gap-4">
+        <div className="flex flex-col gap-8 md:gap-4">
           <SkillsContainer
             src={"/logo/reactjs.png"}
             value={90}
@@ -114,7 +117,8 @@ const SkillsSection = () => {
           />
         </div>
       </div>
-      <div>
+      
+      <div className="w-full">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -124,7 +128,7 @@ const SkillsSection = () => {
         >
           Backend Technologies
         </motion.h1>
-        <div className="flex flex-col flex-wrap md:flex-row gap-4">
+        <div className="flex flex-col gap-8 md:gap-4">
           <SkillsContainer
             src={"/logo/nestjs.jpg"}
             value={75}
@@ -157,7 +161,9 @@ const SkillsSection = () => {
           />
         </div>
       </div>
-      <div>
+      </div>
+      <div className="flex flex-col md:flex-row w-full gap-12">
+      <div className="w-full">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -167,7 +173,7 @@ const SkillsSection = () => {
         >
           DBMS
         </motion.h1>
-        <div className="flex flex-col flex-wrap md:flex-row gap-4">
+        <div className="flex flex-col gap-8 md:gap-4">
           <SkillsContainer
             src={"/logo/mysql.png"}
             value={80}
@@ -181,7 +187,7 @@ const SkillsSection = () => {
         </div>
       </div>
 
-      <div>
+      <div className="w-full">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +197,7 @@ const SkillsSection = () => {
         >
           Development Tools
         </motion.h1>
-        <div className="flex flex-col flex-wrap md:flex-row gap-4">
+        <div className="flex flex-col gap-8 lg:gap-4">
           <SkillsContainer src={"/logo/git.png"} value={80} Title={"GIT "} />
           <SkillsContainer
             src={"/logo/github.png"}
@@ -221,6 +227,7 @@ const SkillsSection = () => {
             Title={"DOCKER"}
           />
         </div>
+      </div>
       </div>
     </div>
   );

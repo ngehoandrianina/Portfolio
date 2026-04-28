@@ -44,14 +44,6 @@ const Navbar = ({ heroVisible }) => {
   //px-32 pt-6
   return (
     <motion.nav
-      animate={{
-        paddingTop: heroVisible ? "0" : "24px",
-        paddingLeft: heroVisible ? "0" : "100px",
-        paddingRight: heroVisible ? "0" : "100px",
-      }}
-      transition={{
-        duration:'0.5'
-      }}
       className="fixed top-0 left-0 right-0 z-10 bg-[#121112] backdrop-blur-sm bg-opacity-90 "
     >
       <motion.div
@@ -67,10 +59,7 @@ const Navbar = ({ heroVisible }) => {
           backgroundColor: "#a72bd0",
         }}
       />
-      <motion.div 
-      animate={{
-        border:heroVisible ? "0":'solid 1px'
-      }} 
+      <motion.div  
       className="flex flex-wrap  items-center justify-between mx-auto p-3 rounded-2xl">
         <Link href={"/"} className="ml-10" style={{ fontFamily: "fantasy" }}>
           <Image
