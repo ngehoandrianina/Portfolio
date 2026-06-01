@@ -52,7 +52,7 @@ const HeroSection = ({setHero}) => {
               repeat={Infinity}
             />
           </motion.h1>
-          <div className="my-8 w-md">
+          <div className="my-8 md:w-[450px]">
             <p>
               I am a Full-Stack Developer focused on building modern and
               efficient web applications. <br />I work with both front-end and
@@ -92,7 +92,7 @@ const HeroSection = ({setHero}) => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              className="socials flex flex-row items-center justify-center md:justify-start gap-2 mt-6 lg:mt-16"
+              className="socials flex flex-row items-center justify-center md:justify-start gap-2 mt-6 lg:mt-6"
             >
               <Link href="https://github.com/ngehoandrianina" target="_blank">
                 <Image src={githubIcon} alt="github" width={50} height={50} />

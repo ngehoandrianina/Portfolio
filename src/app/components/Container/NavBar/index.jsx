@@ -44,7 +44,7 @@ const Navbar = ({ heroVisible }) => {
   //px-32 pt-6
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-10 bg-[#121112] backdrop-blur-sm bg-opacity-90 "
+      className="fixed top-0 left-0 right-0 z-10 bg-[#121112] backdrop-blur-sm bg-opacity-90 border-b-2 "
     >
       <motion.div
         id="scroll-indication"
@@ -87,7 +87,7 @@ const Navbar = ({ heroVisible }) => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto mr-12" id="navbar">
+        <div className="menu hidden md:block md:w-auto mr-12 " id="navbar">
           <ul className="flex justify-center  items-center p-4 md:p-0 flex-col md:flex-row md:space-x-8 mt-0 ">
             {navLink.map((link, index) => (
               <li key={index}>

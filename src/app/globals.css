@@ -27,7 +27,6 @@ body {
  color: var(--foreground);
   background: var(--background);
   font-family: var(--font-roboto), sans-serif;
-
 }
 h1, h2, h3 {
   font-family: var(--font-archivo), sans-serif;

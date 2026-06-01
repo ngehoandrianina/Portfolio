@@ -6,14 +6,14 @@ const MenuOverlay = ({ links, Setnave }) => {
     <motion.ul
       initial={{ height: 0 }}
       animate={{ height: 300 }}
-      className="flex flex-col py-4 items-center  "
+      className="flex flex-col py-4 space-y-4 items-start p-10 "
     >
       {links.map((link, index) => (
         <motion.li
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           key={index}
-          className="mb-1"
+          className="mb-1  w-full"
           onClick={() => Setnave(false)}
         >
           <NavLink href={link.href} title={link.title} />
