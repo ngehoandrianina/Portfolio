@@ -17,18 +17,13 @@ export default function Home() {
   const [hero,sethero] = useState(true)
   return (
     <>
-      
-      <main className=" overflow-hidden  flex min-h-screen flex-col dark:bg-[#150404] bg-dark scroll-smooth">
+      <main  className=" overflow-hidden  flex min-h-screen flex-col scroll-smooth">
         <Navbar heroVisible={hero} />
-        
-        <div className="container mt-24 mx-auto px-12 py-4">
-   
-          <div>
+        <div style={{backgroundImage:"url('/image/bg-hero.jpg')", backgroundRepeat:'no-repeat',backgroundSize:'cover' }} className="px-32">
             <HeroSection id="Home" setHero={sethero} />
-          </div>
-          {/* <div>
-      <AcrhivementSection />
-    </div> */}
+        </div>
+        <div className="container mx-auto px-32 py-4 " >
+          
           <motion.div id="about">
             <AboutSection />
           </motion.div>
