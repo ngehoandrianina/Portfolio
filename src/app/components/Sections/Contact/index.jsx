@@ -1,11 +1,11 @@
 "use client"
 import React from 'react'
 import { useState } from 'react'
-import githubIcon from '../../../../../public/image/github.png'
-import FacebookIcon from '../../../../../public/image/icons8_facebook.png'
-import LinkDIncon from '../../../../../public/image/icons8_linkedin.png'
-import WhatsappIcon from '../../../../../public/image/whatsapp.png'
-import Gmail from '../../../../../public/image/icons8_gmail.png'
+import githubIcon from "../../../../../public/logo/githubn.svg";
+import FacebookIcon from "../../../../../public/image/icons8_facebook.png";
+import LinkDIncon from "../../../../../public/logo/linkedin.svg";
+import WhatsappIcon from "../../../../../public/logo/whatsapp.svg";
+import Gmail from "../../../../../public/logo/gmail.svg";
 import Link from 'next/link'
 import Image from 'next/image'
 import emailjs from 'emailjs-com'
@@ -43,23 +43,24 @@ const EmailSection = () => {
 
   return (
     <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 '>
-      <div>
-        <motion.h5 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='text-xl font-bold text-white my-2 '>Let's Connect</motion.h5>
-        <motion.p initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='text-[#adb7be] mb-4 max-w-md'>
+      <div className='space-y-6'>
+        <motion.h1 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='text-4xl font-bold my-2 '>Let's Connect</motion.h1>
+        <motion.p initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className=' mb-4 max-w-md text-slate-700'>
         {""}
         I'm curently available for new opportunity and open to any discussions. My inbox is always open. if you have any questions or would like to discus future project, I would be happy to share all my expertise and contribute to your initiatives.</motion.p>
-        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='socials flex flex-row gap-2'>
-            <Link href="https://github.com/ngehoandrianina" target="_blank"><Image src={githubIcon} alt='github' width={50} height={50}/></Link> 
-            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/" target="_blank"><Image src={LinkDIncon} alt='Linkedin' width={50} height={50} /></Link>
-            <Link href="https://www.facebook.com/claretanthoonio/" target="_blank"><Image src={FacebookIcon} alt='Facebook' width={50} height={50}/></Link>
-            <Link href="https://wa.me/261340760917" target="_blank"><Image src={WhatsappIcon} alt='Watsapp' width={50} height={50}/></Link>
-            <Link href="mailto:antonioclaret2004@gmail.com" target="_blank"><Image src={Gmail} alt='Watsapp' width={50} height={50}/></Link>
+        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='socials flex flex-row gap-8'>
+            <Link href="https://github.com/ngehoandrianina" target="_blank"><Image src={githubIcon} alt='github' width={40} height={50}/></Link> 
+            <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/" target="_blank"><Image src={LinkDIncon} alt='Linkedin' width={40} height={50} /></Link>
+            {/* <Link href="https://www.facebook.com/claretanthoonio/" target="_blank"><Image src={FacebookIcon} alt='Facebook' width={40} height={50}/></Link> */}
+            <Link href="https://wa.me/261340760917" target="_blank"><Image src={WhatsappIcon} alt='Watsapp' width={40} height={50}/></Link>
+            <Link href="mailto:antonioclaret2004@gmail.com" target="_blank"><Image src={Gmail} alt='Watsapp' width={40} height={50}/></Link>
         </motion.div>
       </div>
-      <div>
+      <div className='border p-8 rounded-xl bg-white'>
         <form className='flex flex-col ' onSubmit={handleSubmit}>
+        <h1 className='mb-4 text-lg'>Send me a message</h1>
         <div className='mb-6'>
-            <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='email' className='text-white block mb-1 text-sm font-medium'>Your Email</motion.label>
+            <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='email' className=' block mb-1 text-sm font-medium'>Your Email</motion.label>
             <motion.input initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} type='email' id="email" required placeholder='example@domain.com' name='Email'
              className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 '
              onChange={(e)=>setFrom(e.target.value)}
@@ -67,7 +68,7 @@ const EmailSection = () => {
              />
         </div>
         <div className='mb-6'>
-             <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='subject' className='text-white block mb-1 text-sm font-medium'>Subject</motion.label>
+             <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='subject' className=' block mb-1 text-sm font-medium'>Subject</motion.label>
             <motion.input initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} type='text' id="subject" required placeholder='Just saying hi' name='Subject'
              className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 '
              onChange={(e)=>setSubject(e.target.value)}
@@ -75,9 +76,9 @@ const EmailSection = () => {
              />
         </div>
         <div className='mb-6'>
-             <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='message' className='text-white block mb-1 text-sm font-medium'>Message</motion.label>
+             <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='message' className=' block mb-1 text-sm font-medium'>Message</motion.label>
             <motion.textarea initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} type='text' id="Message" placeholder='Your Message' name='Message' 
-             className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 '
+             className='bg-[#18191E] border border-[#33353f] h-32 placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 '
              onChange={(e)=>setText(e.target.value)}
              value={text}
              />

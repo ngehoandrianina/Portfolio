@@ -7,6 +7,8 @@ import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { ArrowDownCircleIcon } from "@heroicons/react/16/solid";
 import SocialMediaContact from "../../Container/SocialMedia";
+import AchievementSection from "../Archivement";
+import ArchivementText from '../../Pieces/archivementText'
 const HeroSection = ({setHero}) => {
   const ref = useRef(null)
   const isInView = useInView(ref)
@@ -17,10 +19,10 @@ const HeroSection = ({setHero}) => {
   },[isInView])
   return (
     <section className="h-dvh relative " ref={ref}>
-      <h1 className=" text-secondary sm:text-6xl md:text-7xl lg:text-9xl absolute left-1/2 -translate-x-1/2 top-[17%] w-full text-center ">Antonio Claret</h1>
-      <h1 className=" text-dark sm:text-6xl md:text-7xl lg:text-9xl absolute left-1/2 -translate-x-1/2 top-[16%] w-full text-center ">Antonio Claret</h1>
-      <div className="flex h-full pb-20 justify-between">
-        <div className="col-span-7 space-y-8 place-self-end text-center sm:text-left justify-self-start ">
+      {/* <h1 className=" text-secondary sm:text-6xl md:text-7xl lg:text-9xl absolute left-1/2 -translate-x-1/2 top-[17%] w-full text-center ">Antonio Claret</h1>
+      <h1 className=" text-dark sm:text-6xl md:text-7xl lg:text-9xl absolute left-1/2 -translate-x-1/2 top-[16%] w-full text-center ">Antonio Claret</h1> */}
+      <div className="flex h-full justify-between">
+        <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start ">
           <motion.h1
             className=" mb-4 text-4xl lg:text-2xl lg:leading-normal font-extrabold"
             initial={{ y: -100, opacity: 0 }}
@@ -46,7 +48,7 @@ const HeroSection = ({setHero}) => {
             />
           </motion.h1>
            <div className="md:w-[400px]">
-            <p className="font-caveat text-2xl ">
+            <p className="font-caveat text-2xl  ">
               I am a Full-Stack Developer focused on building modern and
               efficient web applications. <br />I work with both front-end and
               back-end technologies to create user-friendly, reliable, and
@@ -85,8 +87,24 @@ const HeroSection = ({setHero}) => {
             {/* <SocialMediaContact /> */}
           </div>
         </div>
-        <div className="flex items-end justify-end  ">
+        <div className="flex flex-col items-center justify-center gap-20 relative ">
                <SocialMediaContact />
+              <div className="flex w-full justify-evenly">
+                  <ArchivementText Text={'+3'} Under={'Years'}/>
+                  <ArchivementText Text={'+20'} Under={'Projects'}/>
+              </div>
+              <svg viewBox="0 0 1100 800" className="absolute top-0 right-0">
+              <g strokeWidth="6" stroke="#F1F5F9" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="5.5 0" transform="matrix(0.12186934340514749,0.992546151641322,-0.992546151641322,0.12186934340514749,752.2707232944698,-33.76619801858783)">
+              <path d="M212 216.97345733642578Q625 -4.026542663574219 400 404.9734573364258Q215 791.9734573364258 588 592.9734573364258 " markerEnd="url(#SvgjsMarker3624)">
+                </path>
+                </g>
+                <defs>
+                <marker markerWidth="10" markerHeight="10" refX="5" refY="5" viewBox="0 0 10 10" orient="auto" id="SvgjsMarker3624">
+                <polygon points="0,10 5,5 0,0 10,5" fill="#F1F5F9">
+                </polygon>
+                </marker>
+                </defs>
+              </svg>
         </div>
             <Image
               src="/image/CEO-sbg.png"
@@ -94,12 +112,10 @@ const HeroSection = ({setHero}) => {
               width={450}
               height={400}
               priority
-              className="absolute  -translate-x-1/2 left-1/2 bottom-0"
+             className="absolute  -translate-x-1/2 left-1/2 bottom-0"
             />
-  
-           
+       
       </div>
-    
     </section>
   );
 };

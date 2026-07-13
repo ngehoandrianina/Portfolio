@@ -8,7 +8,7 @@ const ServiceCard = ({ image, title, Description }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ margin: "-100px" }}
-      className=" hover: cursor-pointer flex flex-col items-center justify-end border w-80 h-96 rounded-xl overflow-hidden mt-8"
+      className=" hover: cursor-pointer flex flex-col items-center justify-end border w-80 h-52 rounded-xl overflow-hidden mt-8"
       style={{
         backgroundImage: `url(${image})`,
         backgroundPosition: "center",

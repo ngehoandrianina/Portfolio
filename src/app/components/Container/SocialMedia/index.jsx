@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
-import githubIcon from "../../../../../public/image/github.png";
+import githubIcon from "../../../../../public/logo/github.svg";
 import FacebookIcon from "../../../../../public/image/icons8_facebook.png";
-import LinkDIncon from "../../../../../public/image/icons8_linkedin.png";
-import WhatsappIcon from "../../../../../public/image/whatsapp.png";
-import Gmail from "../../../../../public/image/icons8_gmail.png";
+import LinkDIncon from "../../../../../public/logo/linkedin.svg";
+import WhatsappIcon from "../../../../../public/logo/whatsapp.svg";
+import Gmail from "../../../../../public/logo/gmail.svg";
 
 const SocialMediaContact = () => {
     const style = 'flex items-center  shadow w-full text-white gap-2 px-8 py-2 border rounded-3xl font-roboto font-semibold '
@@ -28,7 +28,7 @@ const SocialMediaContact = () => {
               >
                 <Image src={LinkDIncon} alt="Linkedin" width={20} height={50} /> LinkDine
               </Link>
-              <Link
+              {/* <Link
                 href="https://www.facebook.com/claretanthoonio/"
                 target="_blank" className={style}
               >
@@ -38,7 +38,7 @@ const SocialMediaContact = () => {
                   width={20}
                   height={50}
                 /> Facebook
-              </Link>
+              </Link> */}
               <Link href="https://wa.me/261340760917" className={style} target="_blank">
                 <Image
                   src={WhatsappIcon}

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import ProjectCard from "../../Container/ProjectCard/ProjectCard";
 import ProjectTags from "../../Container/ProjectTags";
-import projectsData from "@/data/Projects.json";
+import projectsData from "../../../../data/Projects.json";
 import { motion } from "framer-motion";
 const ProjectSection = () => {
   const [tag, setTag] = useState("All");
@@ -15,16 +15,16 @@ const ProjectSection = () => {
     project.tag.includes(tag)
   );
   return (
-    <>
-      <motion.h2
+    <div className="space-y-12">
+      <motion.h1
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ margin: "-100px" }}
-        className="text-center text-4xl font-bold text-white mt-12 "
+        className="text-center text-2xl  mt-16 "
       >
-        My Project
-      </motion.h2>
+        MY PROJECT
+      </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ const ProjectSection = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -20,10 +20,11 @@ const ProjectCard = ({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ margin: "-100px" }}
+        className="shadow-lg bg-white rounded-xl flex flex-col items-center gap-0"
       >
         <div
-          className="h-52 md:h-80 md:w-96 rounded-t-xl relative group "
-          style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+          className="h-52 md:h-60 md:w-96 rounded-t-xl relative group "
+          style={{ background: `url(${imgUrl})`, backgroundSize: "contain",backgroundRepeat:"no-repeat",backgroundPosition:'center' }}
         >
           <div
             className="overlay items-center rounded-t-xl justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex 
@@ -51,15 +52,14 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
-
-        <div className="text-white rounded-b-xl mt-3 bg-[#1181818] py-6 px-4">
+        <div className=" rounded-b-xl bg-[#1181818] px-4 pb-4 w-full">
           <h5 className="text-xl font-semibold  ">{title}</h5>
-          <p className="text-[#adb7be]">{decription}</p>
+          {/* <p className="text-[#000000]">{decription}</p> */}
           <div className="mt-4 flex gap-2 flex-wrap">
             {outil.map((item, idx) => (
               <p
                 key={idx}
-                className=" px-2 w-fit rounded-xl bg-gradient-to-br from-secondary via-primary to-Tersary"
+                className=" px-4 py-1 w-fit rounded-xl  text-sm font-mono text-white bg-black"
               >
                 {item}
               </p>

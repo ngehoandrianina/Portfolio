@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ProgessBar from "../../Pieces/Progress";
 import SkillsContainer from "../../Container/SkillsContainer";
-import SkillsData from "@/data/Skills.json";
+import SkillsData from "../../../../data/Skills.json";
 import { motion } from "framer-motion";
 const SkillsSection = () => {
   return (
