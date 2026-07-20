@@ -33,6 +33,9 @@ h1, h2, h3 {
   font-family: var(--font-archivo), sans-serif;
   letter-spacing: 0.5px; /* améliore le rendu */
 }
+p{
+  font-family: var(--font-arimo);
+}
 .no-scroll::-webkit-scrollbar{
   display: none;
  
