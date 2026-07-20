@@ -42,9 +42,10 @@ const EmailSection = () => {
 
 
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 '>
+    <section className='grid md:grid-cols-2 mt-12 py-24 gap-4 '>
       <div className='space-y-6'>
-        <motion.h1 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='text-4xl font-bold my-2 '>Let's Connect</motion.h1>
+        <p className='font-semibold'>-- CONTACTE</p>
+        <motion.h1 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='text-5xl font-bold my-2 '>TRAVAILLONS<br/> ENSEMBLE.</motion.h1>
         <motion.p initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className=' mb-4 max-w-md text-slate-700'>
         {""}
         I'm curently available for new opportunity and open to any discussions. My inbox is always open. if you have any questions or would like to discus future project, I would be happy to share all my expertise and contribute to your initiatives.</motion.p>
@@ -56,7 +57,7 @@ const EmailSection = () => {
             <Link href="mailto:antonioclaret2004@gmail.com" target="_blank"><Image src={Gmail} alt='Watsapp' width={40} height={50}/></Link>
         </motion.div>
       </div>
-      <div className='border p-8 rounded-xl bg-white'>
+      <div className='border p-8 rounded-xl bg-white mt-12'>
         <form className='flex flex-col ' onSubmit={handleSubmit}>
         <h1 className='mb-4 text-lg'>Send me a message</h1>
         <div className='mb-6'>

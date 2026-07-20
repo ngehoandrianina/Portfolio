@@ -30,7 +30,7 @@ const HeroSection = ({setHero}) => {
             transition={{ duration: 1 }}
           >
             {" "}
-            <span className="text-transparent text-6xl bg-clip-text bg-gradient-to-r from-primary via-secondary to-Tersary">
+            <span className="text-transparent text-7xl bg-clip-text bg-gradient-to-r from-primary via-primary to-Tersary">
               I'm{" "}
             </span>
             <br />
@@ -44,15 +44,14 @@ const HeroSection = ({setHero}) => {
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="text-white"
+              className="text-white text-6xl"
             />
           </motion.h1>
            <div className="md:w-[400px]">
-            <p className="font-caveat text-2xl  ">
-              I am a Full-Stack Developer focused on building modern and
-              efficient web applications. <br />I work with both front-end and
-              back-end technologies to create user-friendly, reliable, and
-              scalable solutions.{" "}
+            <p className="font-arimo text-lg">
+              Je conçois des solutions numériques modernes, 
+              performantes et évolutives pour
+               transformer les idées en réalités.{" "}
             </p>
           </div>
           <div>

@@ -6,7 +6,7 @@ import Cassroll from "../../Container/Cassroll";
 import { motion } from "framer-motion";
 import ServiceCard from "../../Container/ServiceCard";
 
-const AboutSection = () => {
+const ServiceSection = () => {
   const Service = [
     {
       "lienimage": "/svg/ffflurry.svg",
@@ -91,4 +91,4 @@ const AboutSection = () => {
     </section>
   );
 };
-export default AboutSection;
+export default ServiceSection;
