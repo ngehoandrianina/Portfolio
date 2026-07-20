@@ -1,7 +1,6 @@
 "use client";
 import HeroSection from "./components/Sections/HeroSection";
 import Navbar from "./components/Container/NavBar";
-import AboutSection from "./components/Sections/Service";
 import ProjectSection from "./components/Sections/ProjectSection";
 import EmailSection from "./components/Sections/Contact";
 import Footer from "./components/Sections/Footer/Footer";
@@ -13,6 +12,7 @@ import ExperienceSection from "./components/Sections/Experience";
 import ParticlesBackground from "./components/Container/Partialjs";
 import BackGound from "./components/Container/Partialjs";
 import Myskills from "./components/Sections/Skills2";
+import AboutSection from "./components/Sections/About";
 export default function Home() {
   const [islight, SetLight] = useState(false);
   const [hero,sethero] = useState(true)
@@ -27,10 +27,9 @@ export default function Home() {
             </svg>
         </div>
         <div className="container bg-slate-100 mx-auto px-32 py-4 " style={{backgroundImage:"url('/svg/ooorganize.svg')"}} >
-          
-          {/* <motion.div id="about" >
-            <AboutSection />
-          </motion.div> */}
+          <motion.div id="about" >
+            <AboutSection/>
+          </motion.div>
           {/* <div id="Experience">
             <ExperienceSection />
           </div> */}
