@@ -18,6 +18,7 @@ module.exports = {
         'roboto': ['Roboto', 'sans-serif'],
         'archivo': ['Archivo', 'sans-serif'],
         'caveat': ['Caveat', 'cursive'], 
+        'arimo':['Arimo','sans-serif']
       },
     },
   },
