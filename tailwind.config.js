@@ -6,13 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#DFCBB2",     // couleur personnalisée
-        secondary: "#DFD3C3",
-        Tersary: "#953B00",
-        light: "#DFD3C3",
-        dark: "#0A0D14",
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+          primary: "var(--primary)",
+          secondary: "var(--secondary)",
+          Tersary: "var(--tersary)",
+          light: "var(--light)",
+          dark: "var(--dark)",
+          background: 'var(--background)',
+          foreground: 'var(--foreground)',
       },
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif'],

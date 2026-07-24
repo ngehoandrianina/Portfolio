@@ -11,6 +11,11 @@ html {
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
+    --primary: #DFCBB2;
+    --secondary: #DFD3C3;
+    --tersary: #953B00;
+    --light: #DFD3C3;
+    --dark: #0A0D14;
   }
 
   .dark {
@@ -39,6 +44,9 @@ p{
 .no-scroll::-webkit-scrollbar{
   display: none;
  
+}
+span{
+  color:var(--primary);
 }
 .no-scroll{
   -ms-overflow-style: none; /* IE et Edge */
