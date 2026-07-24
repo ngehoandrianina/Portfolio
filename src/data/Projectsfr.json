@@ -1,0 +1,62 @@
+[
+    {
+        "id": 6,
+        "title": "MedAccess",
+        "description": "Il s'agit d'un projet visant à centraliser les acteurs du secteur de la santé au sein d'un système unique. Le système permet aux utilisateurs de prendre des rendez-vous et de consulter les établissements de santé ainsi que les praticiens. Ce projet fait partie d'un stage à NEOTIK Corporation.",
+        "image": "/image/Projects/madoc.png",
+        "tag": ["Touts", "web"],
+        "gitUtl": "#",
+        "previewUrl": "/",
+        "outils": ["NextJs", "NestJs", "Prisma", "Mysql"]
+    },
+    {
+        "id": 1,
+        "title": "Projet Spring Boot",
+        "description": "Il s'agit d'un projet académique axé sur la gestion des clients dans un système bancaire. Le projet vise à gérer les informations des clients de manière efficace et sécurisée au sein d'un environnement bancaire.",
+        "image": "/image/Projects/jsp.png",
+        "tag": ["Touts", "Web"],
+        "gitUtl": "https://github.com/ngehoandrianina/ClaretRepository.git",
+        "previewUrl": "/",
+        "outils": ["SpringBoot", "ReactJs", "Mysql"]
+    },
+    {
+        "id": 2,
+        "title": "Projet Node Js",
+        "description": "Il s'agit d'un projet académique axé sur la gestion des clients dans un système bancaire. Le projet vise à gérer les informations des clients de manière efficace et sécurisée au sein d'un environnement bancaire.",
+        "image": "/image/Projects/Node.png",
+        "tag": ["Touts", "Web"],
+        "gitUtl": "https://github.com/ngehoandrianina/NodeProjet.git",
+        "previewUrl": "/",
+        "outils": ["NodeJS", "ReactJs", "Mysql"]
+    },
+    {
+        "id": 3,
+        "title": "Jeu d'échecs local",
+        "description": "Chess Local est un projet académique qui permet aux joueurs de jouer aux échecs en local. Le projet a été développé pour pratiquer et comprendre la communication WebSocket, permettant une interaction en temps réel entre les joueurs.",
+        "image": "/image/Projects/echec.png",
+        "tag": ["Touts", "Web"],
+        "gitUtl": "https://github.com/ngehoandrianina/ChessLocal.git",
+        "previewUrl": "/",
+        "outils": ["NodeJS", "ReactJs", "Mysql"]
+    },
+    {
+        "id": 4,
+        "title": "Mon portfolio",
+        "description": "J'ai créé ce portfolio pour présenter toutes mes réalisations et projets tout au long de mon parcours académique et professionnel. Il s'agit d'un projet personnel conçu pour mettre en valeur mes compétences, mes expériences et ma progression dans le domaine de l'informatique.",
+        "image": "/image/Projects/portfolio.png",
+        "tag": ["Touts", "Web"],
+        "gitUtl": "https://github.com/ngehoandrianina/Portfolio.git",
+        "previewUrl": "/",
+        "outils": ["NextJs"]
+    },
+    {
+        "id": 5,
+        "title": "Gestion d'emploi du temps",
+        "description": "Schedule Management est un projet personnel que j'ai conçu et déployé pour mon usage personnel afin d'organiser mes activités quotidiennes et de suivre l'avancement de mes projets personnels et académiques. Cette application fournit des rappels quotidiens des tâches à accomplir et met en évidence les projets et délais les plus urgents, ce qui m'aide à rester organisé, concentré et productif.",
+        "image": "/image/Projects/shd2.jpg",
+        "tag": ["Touts", "Mobile"],
+        "gitUtl": "#",
+        "previewUrl": "/",
+        "outils": ["React Native", "SQLite"]
+    }
+]
