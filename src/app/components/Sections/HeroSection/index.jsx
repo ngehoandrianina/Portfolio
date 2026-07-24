@@ -48,11 +48,13 @@ const HeroSection = ({setHero}) => {
             />
           </motion.h1>
            <div className="md:w-[400px]">
-            <p className="font-arimo text-lg">
+            <motion.p  initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 } }
+        transition={{ duration: 0.6 }} className="font-arimo text-lg">
               Je conçois des solutions numériques modernes, 
               performantes et évolutives pour
                transformer les idées en réalités.{" "}
-            </p>
+            </motion.p>
           </div>
           <div>
             <motion.button

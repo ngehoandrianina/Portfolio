@@ -17,7 +17,7 @@ const SocialMediaContact = () => {
             className=" grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 lg:mt-6  w-full"
             >
             <Link href="mailto:antonioclaret2004@gmail.com " className={`${style}  `} target="_blank">
-                <Image src={Gmail} alt="Watsapp" width={20} height={50} /> Email
+                <Image src={Gmail} alt="Watsapp" width={20} height={50}  /> Email
               </Link>
               <Link href="https://github.com/ngehoandrianina" className={style}  target="_blank">
                 <Image src={githubIcon} alt="github" width={20} height={50} /> GitHub

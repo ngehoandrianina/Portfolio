@@ -38,8 +38,6 @@ const EmailSection = () => {
     }
 
   };
-  
-
 
   return (
     <section className='grid md:grid-cols-2 mt-12 py-24 gap-4 '>
