@@ -9,24 +9,24 @@ import Image from "next/image";
 import { motion, useScroll, useSpring } from "framer-motion";
 const navLink = [
   {
-    title: "Home",
+    title: "Accueil",
     href: "#Home",
   },
   {
-    title: "Service",
+    title: "A propos",
     href: "#about",
   },
   {
-    title: "Experience",
-    href: "#Experience",
+    title: "Expertise",
+    href: "#Expertise",
   },
   {
-    title: "Skills",
-    href: "#Skills",
-  },
-  {
-    title: "Projects",
+    title: "Projets",
     href: "#Projects",
+  },
+  {
+    title: "Services",
+    href: "#Service",
   },
   {
     title: "Contact",

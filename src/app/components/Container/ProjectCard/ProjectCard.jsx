@@ -11,24 +11,20 @@ const ProjectCard = ({
   gitUrl,
   previewUrl,
   outil,
+  variants
 }) => {
   const [Show, setShow] = useState(false);
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ margin: "-100px" }}
-        className="shadow-lg bg-white rounded-xl flex flex-col items-center gap-0"
-      >
+      <motion.div variants={variants}
+        className="shadow-lg bg-white rounded-xl flex flex-col items-center gap-0">
         <div
           className="h-52 md:h-60 md:w-96 rounded-t-xl relative group "
           style={{ background: `url(${imgUrl})`, backgroundSize: "contain",backgroundRepeat:"no-repeat",backgroundPosition:'center' }}
         >
           <div
-            className="overlay items-center rounded-t-xl justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex 
-        group-hover:bg-opacity-80 transition-all duration-500"
+            className="overlay items-center rounded-xl justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex 
+        group-hover:bg-opacity-80 transition-all duration-400"
           >
             <Link
               href={gitUrl}
@@ -59,7 +55,7 @@ const ProjectCard = ({
             {outil.map((item, idx) => (
               <p
                 key={idx}
-                className=" px-4 py-1 w-fit rounded-xl  text-sm font-mono text-white bg-black"
+                className=" px-2 py-1 w-fit rounded-xl text-[12px] font-arimo text-white bg-black"
               >
                 {item}
               </p>

@@ -6,12 +6,12 @@ const AboutSection = () => {
     <div className='py-8 grid grid-cols-2'>
         <div className=''>
         <p className='font-roboto mb-4 font-semibold'>-- A PROPOS DE MOI</p>
-        <h1 className='text-5xl mb-4 '>
+        <h1 className='text-5xl mb-12 '>
            IMAGINER,<br/>
             CONSTRUIRE,<br/>
            <span className='text-primary'>PERFECTIONNER.</span> 
         </h1>
-        <p className='w-[32rem] text-lg font-arimo'>Je suis NGEHO ANDRIANINA Antonio Claret,
+        <p className='w-[32rem] text-md  font-arimo'>Je suis NGEHO ANDRIANINA Antonio Claret,
              développeur passionné par la conception et le développement 
              d'applications web et mobiles modernes.<br/> Je crée des solutions 
              numériques sur mesure

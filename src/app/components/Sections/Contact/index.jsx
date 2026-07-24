@@ -45,48 +45,48 @@ const EmailSection = () => {
     <section className='grid md:grid-cols-2 mt-12 py-24 gap-4 '>
       <div className='space-y-6'>
         <p className='font-semibold'>-- CONTACTE</p>
-        <motion.h1 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='text-5xl font-bold my-2 '>TRAVAILLONS<br/> ENSEMBLE.</motion.h1>
-        <motion.p initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className=' mb-4 max-w-md text-slate-700'>
+        <h1 className='text-5xl font-bold my-2 '>TRAVAILLONS<br/> ENSEMBLE.</h1>
+        <p  className=' mb-4 max-w-md text-slate-700'>
         {""}
-        I'm curently available for new opportunity and open to any discussions. My inbox is always open. if you have any questions or would like to discus future project, I would be happy to share all my expertise and contribute to your initiatives.</motion.p>
-        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} className='socials flex flex-row gap-8'>
+        I'm curently available for new opportunity and open to any discussions. My inbox is always open. if you have any questions or would like to discus future project, I would be happy to share all my expertise and contribute to your initiatives.</p>
+        <div  className='socials flex flex-row gap-8'>
             <Link href="https://github.com/ngehoandrianina" target="_blank"><Image src={githubIcon} alt='github' width={40} height={50}/></Link> 
             <Link href="https://www.linkedin.com/in/antonio-claret-baa78930b/" target="_blank"><Image src={LinkDIncon} alt='Linkedin' width={40} height={50} /></Link>
             {/* <Link href="https://www.facebook.com/claretanthoonio/" target="_blank"><Image src={FacebookIcon} alt='Facebook' width={40} height={50}/></Link> */}
             <Link href="https://wa.me/261340760917" target="_blank"><Image src={WhatsappIcon} alt='Watsapp' width={40} height={50}/></Link>
             <Link href="mailto:antonioclaret2004@gmail.com" target="_blank"><Image src={Gmail} alt='Watsapp' width={40} height={50}/></Link>
-        </motion.div>
+        </div>
       </div>
       <div className='border p-8 rounded-xl bg-white mt-12'>
         <form className='flex flex-col ' onSubmit={handleSubmit}>
         <h1 className='mb-4 text-lg'>Send me a message</h1>
         <div className='mb-6'>
-            <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='email' className=' block mb-1 text-sm font-medium'>Your Email</motion.label>
-            <motion.input initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} type='email' id="email" required placeholder='example@domain.com' name='Email'
+            <label  htmlFor='email' className=' block mb-1 text-sm font-medium'>Your Email</label>
+            <input  type='email' id="email" required placeholder='example@domain.com' name='Email'
              className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 '
              onChange={(e)=>setFrom(e.target.value)}
              value={from}
              />
         </div>
         <div className='mb-6'>
-             <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='subject' className=' block mb-1 text-sm font-medium'>Subject</motion.label>
-            <motion.input initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} type='text' id="subject" required placeholder='Just saying hi' name='Subject'
+             <label  htmlFor='subject' className=' block mb-1 text-sm font-medium'>Subject</label>
+            <input  type='text' id="subject" required placeholder='Just saying hi' name='Subject'
              className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 '
              onChange={(e)=>setSubject(e.target.value)}
              value={subject}
              />
         </div>
         <div className='mb-6'>
-             <motion.label initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} htmlFor='message' className=' block mb-1 text-sm font-medium'>Message</motion.label>
-            <motion.textarea initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} type='text' id="Message" placeholder='Your Message' name='Message' 
+             <label  htmlFor='message' className=' block mb-1 text-sm font-medium'>Message</label>
+            <textarea  type='text' id="Message" placeholder='Your Message' name='Message' 
              className='bg-[#18191E] border border-[#33353f] h-32 placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 '
              onChange={(e)=>setText(e.target.value)}
              value={text}
              />
         </div>
-        <motion.button initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{margin:"-100px"}} type='submit' className='bg-gradient-to-tr from-Tersary to-secondary hover:bg-gradient-to-tl transition-all duration-75 text-white font-medium py-2.5 px-5 rounded-lg w-full'>
+        <button  type='submit' className='bg-gradient-to-tr from-Tersary to-secondary hover:bg-gradient-to-tl transition-all duration-75 text-white font-medium py-2.5 px-5 rounded-lg w-full'>
             Send message
-        </motion.button>
+        </button>
         </form>
       {
         Status && (

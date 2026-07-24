@@ -26,7 +26,7 @@ const SocialMediaContact = () => {
                 href="https://www.linkedin.com/in/antonio-claret-baa78930b/"
                 target="_blank" className={style}
               >
-                <Image src={LinkDIncon} alt="Linkedin" width={20} height={50} /> LinkDine
+                <Image src={LinkDIncon} alt="Linkedin" width={20} height={50} /> LinkDin
               </Link>
               {/* <Link
                 href="https://www.facebook.com/claretanthoonio/"

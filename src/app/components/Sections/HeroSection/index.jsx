@@ -30,15 +30,15 @@ const HeroSection = ({setHero}) => {
             transition={{ duration: 1 }}
           >
             {" "}
-            <span className="text-transparent text-7xl bg-clip-text bg-gradient-to-r from-primary via-primary to-Tersary">
-              I'm{" "}
+            <span className="text-transparent text-7xl bg-clip-text bg-gradient-to-r from-black  to-Tersary">
+              Je suis{" "}
             </span>
             <br />
             <TypeAnimation
               sequence={[
-                "FullStack",
+                "Full-Stack",
                 1000,
-                "Developer",
+                "Développeur",
                 1000,
               ]}
               wrapper="span"
