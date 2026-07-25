@@ -137,7 +137,7 @@ const EmailSection = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className='grid md:grid-cols-2 mt-12 py-24 gap-4 overflow-hidden relative'
+      className='grid md:grid-cols-2 md:mt-12 md:py-24 gap-4 overflow-hidden relative'
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -158,12 +158,12 @@ const EmailSection = () => {
 
       {/* Colonne Gauche - Texte et infos */}
       <motion.div className='space-y-6' variants={itemVariants}>
-        <motion.p 
+        <motion.div 
           className='font-semibold flex items-center gap-2 text-primary tracking-wider'
           variants={itemVariants}
         >
           <div  className="w-8 h-1 bg-primary"></div> CONTACTE
-        </motion.p>
+        </motion.div>
         
         <motion.h1 
           className='text-5xl font-bold my-2'
@@ -184,15 +184,14 @@ const EmailSection = () => {
             transition: { type: "spring", stiffness: 300, damping: 20 }
           }}
         >
-          I'm currently available for new opportunity and open to any discussions. 
-          My inbox is always open. If you have any questions or would like to 
-          discuss future project, I would be happy to share all my expertise and 
-          contribute to your initiatives.
+          Disponible pour de nouvelles opportunités, je suis ouvert à toute discussion. 
+          N'hésitez pas à me contacter pour toute question ou projet futur.<br/> 
+          Je serais ravi de partager mon expertise et de contribuer à vos initiatives.
         </motion.p>
         
         {/* Réseaux sociaux avec animation individuelle */}
         <motion.div 
-          className='socials flex flex-row gap-8'
+          className='socials flex flex-row gap-8 '
           variants={itemVariants}
         >
           {[
@@ -224,7 +223,7 @@ const EmailSection = () => {
 
       {/* Colonne Droite - Formulaire */}
       <motion.div 
-        className='border p-8 rounded-xl bg-white mt-12 shadow-lg hover:shadow-2xl transition-shadow duration-300'
+        className='border p-4 md:p-8 rounded-xl bg-white mt-12 shadow-lg hover:shadow-2xl transition-shadow duration-300'
         variants={formVariants}
       >
         <motion.form 
@@ -237,7 +236,7 @@ const EmailSection = () => {
             animate={isInView ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Send me a message
+            Un message ?
           </motion.h1>
 
           {/* Champ Email */}
@@ -249,7 +248,7 @@ const EmailSection = () => {
             animate={isInView ? "visible" : "hidden"}
           >
             <label htmlFor='email' className='block mb-1 text-sm font-medium text-gray-700'>
-              Your Email
+              Votre Email
             </label>
             <motion.input
               type='email'
@@ -277,13 +276,13 @@ const EmailSection = () => {
             animate={isInView ? "visible" : "hidden"}
           >
             <label htmlFor='subject' className='block mb-1 text-sm font-medium text-gray-700'>
-              Subject
+              Sujet
             </label>
             <motion.input
               type='text'
               id="subject"
               required
-              placeholder='Just saying hi'
+              placeholder='Bonjour...'
               name='Subject'
               className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300'
               onChange={(e) => setSubject(e.target.value)}
@@ -310,7 +309,7 @@ const EmailSection = () => {
             <motion.textarea
               type='text'
               id="Message"
-              placeholder='Your Message'
+              placeholder='Votre message...'
               name='Message'
               className='bg-[#18191E] border border-[#33353f] h-32 placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300 resize-none'
               onChange={(e) => setText(e.target.value)}
@@ -326,7 +325,7 @@ const EmailSection = () => {
           {/* Bouton d'envoi */}
           <motion.button
             type='submit'
-            className='bg-gradient-to-tr from-Tersary to-secondary hover:bg-gradient-to-tl transition-all duration-300 text-white font-medium py-2.5 px-5 rounded-lg w-full relative overflow-hidden group'
+            className='bg-gradient-to-tr from-Tersary to-dark hover:bg-gradient-to-tl transition-all duration-300 text-white font-medium py-2.5 px-5 rounded-lg w-full relative overflow-hidden group'
             initial={{ y: 20, opacity: 0, scale: 0.95 }}
             animate={isInView ? { y: 0, opacity: 1, scale: 1 } : { y: 20, opacity: 0, scale: 0.95 }}
             transition={{
@@ -346,7 +345,7 @@ const EmailSection = () => {
             <motion.span
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
             />
-            <span className="relative z-10">Send message</span>
+            <span className="relative z-10">Envoyer le message</span>
           </motion.button>
         </motion.form>
 

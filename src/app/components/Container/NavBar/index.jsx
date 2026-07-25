@@ -44,6 +44,9 @@ const Navbar = ({ heroVisible }) => {
   //px-32 pt-6
   return (
     <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-10 backdrop-blur-sm bg-opacity-90 lg:px-24 lg:pt-8 "
     >
       <motion.div  
@@ -102,15 +105,17 @@ const Navbar = ({ heroVisible }) => {
           </ul>
         </div>
          <motion.button
-              className=" hidden md:block cursor-pointer px-6 py-2 w-22 sm:w-fit rounded-full bg-gradient-to-br from-primary via-secondary to-Tersary hover:bg-slate-800 text-dark font-bold whitespace-nowrap"
+              className=" hidden md:block cursor-pointer px-6 py-2 w-22 sm:w-fit rounded-full bg-gradient-to-br from-primary  to-Tersary hover:bg-slate-800 text-dark font-bold whitespace-nowrap"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 1,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                delay: 0.4,
               }}
+              
             >
-              <Link href="#contact" className="flex gap-4 ">Lets' talk </Link>
+              <Link href="#contact" className="flex gap-4 ">Discutons-en</Link>
         </motion.button>
       </motion.div>
       {navbarOpen ? (

@@ -1,17 +1,20 @@
 import React, { useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion,useInView } from 'framer-motion';
 import ChooseContainer from '../../Container/ChooseContainer';
 import { RiTargetFill, RiTimeLine } from 'react-icons/ri';
 import { FaBriefcase } from 'react-icons/fa';
-import { useInView } from 'react-intersection-observer';
+//import { useInView } from 'react-intersection-observer';
 
 const WhatChooseMe = () => {
   const sectionRef = useRef(null);
-   const { ref, inView } = useInView({
-    triggerOnce: true, // ✅ Correct avec react-intersection-observer
-    threshold: 0.2,
-  });
-
+  //  const { ref, inView } = useInView({
+  //   triggerOnce: true, 
+  //   threshold: 0.2,
+  // });
+  const isSectionInView = useInView(sectionRef, {
+      once: true,
+      amount: 0.1,
+    });
   // Variants individuels pour chaque carte
   const leftCardVariants = {
     hidden: { x: -120, opacity: 0, y: 0 },
@@ -61,22 +64,22 @@ const WhatChooseMe = () => {
   };
 
   return (
-    <div ref={ref} className='mt-12 h-dvh overflow-hidden px-4'>
+    <div ref={sectionRef} className='mt-12 md:h-dvh md:overflow-hidden px-4'>
       <motion.h1 
         className='text-4xl mt-4 text-center font-bold mb-12 text-white'
         initial={{ y: -50, opacity: 0 }}
-        animate={inView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
+        animate={isSectionInView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
         transition={{ duration: 0.6 }}
       >
         POURQUOI ME CHOISIR ?
       </motion.h1>
 
-      <div className='flex items-start py-32 justify-evenly flex-wrap gap-8 h-full'>
+      <div className='flex items-start md:py-32 justify-evenly flex-wrap gap-8 h-full'>
         {/* Carte Gauche */}
         <motion.div
           variants={leftCardVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={isSectionInView ? "visible" : "hidden"}
           className="transform transition-all duration-300"
           whileHover={{ scale: 1.05, y: -5 }}
         >
@@ -91,8 +94,8 @@ const WhatChooseMe = () => {
         <motion.div
           variants={bottomCardVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="transform transition-all duration-300 mt-8 md:mt-12 lg:mt-20"
+          animate={isSectionInView ? "visible" : "hidden"}
+          className="transform transition-all duration-300 mt-4 md:mt-12 lg:mt-20"
           whileHover={{ scale: 1.05, y: -5 }}
         >
           <ChooseContainer 
@@ -106,7 +109,7 @@ const WhatChooseMe = () => {
         <motion.div
           variants={rightCardVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={isSectionInView ? "visible" : "hidden"}
           className="transform transition-all duration-300"
           whileHover={{ scale: 1.05, y: -5 }}
         >

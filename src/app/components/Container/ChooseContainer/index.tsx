@@ -8,7 +8,7 @@ const ChooseContainer = ({icon,text,number}) => {
             <div className='text-white'>{icon}</div>
             <h1 className='text-2xl text-white'>{number}</h1>
         </div>
-        <p className='mt-8 text-white'>{text}</p>
+        <p className='mt-8 text-white leading-relaxed'>{text}</p>
     </div>
   )
 }

@@ -87,7 +87,7 @@ const AboutSection = () => {
   return (
     <motion.div
       ref={sectionRef}
-      className='py-8 grid grid-cols-2 gap-8 overflow-hidden'
+      className='py-8 grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-hidden'
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
@@ -96,21 +96,21 @@ const AboutSection = () => {
         className=''
         variants={textVariants}
       >
-        <motion.p 
+        <motion.div 
           className='font-roboto mb-4 font-semibold flex items-center gap-2 text-primary'
           variants={textChildVariants}
         >
-          <div  className="w-8 h-1 bg-primary"></div> A PROPOS DE MOI
-        </motion.p>
+          <p  className="w-8 h-1 bg-primary"></p> A PROPOS DE MOI
+        </motion.div>
         
         <motion.h1 
-          className='text-5xl mb-12 font-bold'
+          className='text-4xl md:text-5xl mb-12 font-bold'
           variants={textChildVariants}
         >
           IMAGINER,<br/>
           CONSTRUIRE,<br/>
           <motion.span 
-            className='inline-block mt-1 py-2 bg-gradient-to-r from-black to-Tersary bg-clip-text text-transparent'
+            className='inline-block md:mt-1 md:py-2 bg-gradient-to-r from-black to-Tersary bg-clip-text text-transparent'
             whileHover={{
               scale: 1.05,
               transition: { type: "spring", stiffness: 400, damping: 17 }
@@ -121,7 +121,7 @@ const AboutSection = () => {
         </motion.h1>
         
         <motion.p 
-          className='w-[32rem] text-md font-arimo leading-relaxed text-gray-700'
+          className='md:w-[32rem] text-md font-arimo leading-relaxed text-gray-700'
           variants={textChildVariants}
         >
           Je suis NGEHO ANDRIANINA Antonio Claret,

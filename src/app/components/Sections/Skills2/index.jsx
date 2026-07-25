@@ -196,7 +196,7 @@ const Myskills = () => {
   return (
     <motion.div 
       ref={sectionRef}
-      className='flex flex-col items-start mt-12 overflow-hidden px-4'
+      className='flex flex-col items-start md:mt-12 overflow-hidden px-4'
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -211,7 +211,7 @@ const Myskills = () => {
 
       {/* En-tête */}
       <motion.div 
-        className='flex justify-between w-full mb-24 flex-wrap gap-4'
+        className='flex justify-between w-full mb-12 md:mb-24 flex-wrap gap-4'
         variants={itemVariants}
       >
         <motion.h1 
@@ -231,7 +231,7 @@ const Myskills = () => {
         </motion.h1>
         
         <motion.p 
-          className='w-[28rem] text-sm text-right text-gray-600 leading-relaxed'
+          className='md:w-[28rem] md:text-sm text-center md:text-right text-gray-600 leading-relaxed'
           variants={titleVariants}
           whileHover={{
             x: 5,
@@ -243,9 +243,8 @@ const Myskills = () => {
           actuels tout en garantissant performance, flexibilité et évolution à long terme.
         </motion.p>
       </motion.div>
-
       {/* Grille des technologies avec animation individuelle */}
-      <div className='flex gap-4 flex-wrap'>
+      <div className='flex gap-4 flex-wrap justify-center md:justify-start'>
         {techList.map((tech, index) => (
           <TechCard key={index} tech={tech} index={index} />
         ))}
@@ -272,7 +271,7 @@ const Myskills = () => {
 
         <InfiniteCarouselWithPause 
           items={techItems}
-          speed={60}
+          speed={5}
           direction="left"
           pauseOnHover={true}
           className="mt-8 py-4"
