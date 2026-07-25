@@ -17,6 +17,7 @@ import WhatChooseMe from "./components/Sections/WhatShooseMe";
 export default function Home() {
   const [islight, SetLight] = useState(false);
   const [hero,sethero] = useState(true)
+  const styleglobale = 'mx-auto px-32 py-4 '
   return (
     <>
       <main  className=" overflow-hidden  flex min-h-screen flex-col scroll-smooth">
@@ -27,20 +28,20 @@ export default function Home() {
               <path fill="#F1F5F9" d="M0,56 C240,0 480,120 720,88 C960,56 1200,0 1440,56 L1440,120 L0,120 Z"></path>
             </svg>
         </div>
-        <div className="container bg-slate-100 mx-auto px-32 py-4 " style={{backgroundImage:"url('/svg/ooorganiz.svg')"}} >
-          <motion.div id="about" >
+        <div className="container bg-slate-100 " style={{backgroundImage:"url('/svg/ooorganiz.svg')"}} >
+          <motion.div id="about" className={styleglobale} >
             <AboutSection/>
           </motion.div>
-          <div id="Expertise">
+          <div id="Expertise" className={styleglobale} >
             <Myskills />
           </div>
-          <div id="Projects">
+          <div id="Projects" className={styleglobale}  style={{backgroundImage:"url('/svg/ooorganize.svg')"}}>
             <ProjectSection />
           </div>
-          <div id="Service">
+          <div id="Service" className={`${styleglobale} bg-gradient-to-b from-black to-Tersary`} >
             <WhatChooseMe />
           </div>
-          <div id="contact">
+          <div id="contact" className={styleglobale} >
             <EmailSection />
           </div>
         </div>
