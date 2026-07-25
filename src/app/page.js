@@ -17,14 +17,14 @@ import WhatChooseMe from "./components/Sections/WhatShooseMe";
 export default function Home() {
   const [islight, SetLight] = useState(false);
   const [hero,sethero] = useState(true)
-  const styleglobale = 'mx-auto px-32 py-4 '
+  const styleglobale = 'mx-auto px-2 lg:px-32 py-4 '
   return (
     <>
       <main  className=" overflow-hidden  flex min-h-screen flex-col scroll-smooth">
         <Navbar heroVisible={hero} />
-        <div style={{backgroundImage:"url('/svg/gggrain2.svg')", backgroundRepeat:'repeat',backgroundSize:'contain' }} className="px-32 relative">
+        <div style={{backgroundImage:"url('/svg/gggrain2.svg')", backgroundRepeat:'repeat',backgroundSize:'contain' }} className="px-2 lg:px-32 relative">
             <HeroSection id="Home" setHero={sethero} />
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="absolute bottom-0 left-0">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="absolute  bottom-0  left-0">
               <path fill="#F1F5F9" d="M0,56 C240,0 480,120 720,88 C960,56 1200,0 1440,56 L1440,120 L0,120 Z"></path>
             </svg>
         </div>
