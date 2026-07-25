@@ -6,7 +6,7 @@ const MenuOverlay = ({ links, Setnave }) => {
     <motion.ul
       initial={{ height: 0 }}
       animate={{ height: 300 }}
-      className="flex flex-col py-4 space-y-4 items-start p-10 "
+      className="flex flex-col py-4 space-y-4 items-start p-10 bg-dark "
     >
       {links.map((link, index) => (
         <motion.li

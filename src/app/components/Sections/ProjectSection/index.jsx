@@ -55,8 +55,8 @@ const ProjectSection = () => {
   };
 
   return (
-    <div ref={ref} className="mt-16">
-      <p className="font-semibold">-- PROJETS</p>
+    <div ref={ref} className="mt-16 backdrop-blur-[2px]">
+      <p className="font-semibold flex items-center gap-2 text-primary"><div  className="w-8 h-1 bg-primary"></div> PROJETS</p>
       <div className="flex justify-between mt-8">
         <h1 className="text-5xl bg-gradient-to-r from-Tersary to-black bg-clip-text text-transparent font-extrabold">
           MES PROJETS

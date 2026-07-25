@@ -203,10 +203,10 @@ const Myskills = () => {
     >
       {/* Badge -- EXPERTISE */}
       <motion.p 
-        className='font-arimo font-semibold mb-4 text-primary tracking-wider'
+        className='font-arimo font-semibold flex items-center gap-2 mb-4 text-primary tracking-wider'
         variants={itemVariants}
       >
-        -- EXPERTISE
+        <div  className="w-8 h-1 bg-primary"></div> EXPERTISE
       </motion.p>
 
       {/* En-tête */}

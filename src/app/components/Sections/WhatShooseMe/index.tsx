@@ -61,9 +61,9 @@ const WhatChooseMe = () => {
   };
 
   return (
-    <div ref={ref} className='mt-12 overflow-hidden px-4'>
+    <div ref={ref} className='mt-12 h-dvh overflow-hidden px-4'>
       <motion.h1 
-        className='text-4xl mt-4 text-center font-bold mb-12'
+        className='text-4xl mt-4 text-center font-bold mb-12 text-white'
         initial={{ y: -50, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
         transition={{ duration: 0.6 }}
@@ -71,7 +71,7 @@ const WhatChooseMe = () => {
         POURQUOI ME CHOISIR ?
       </motion.h1>
 
-      <div className='flex items-center justify-evenly mt-12 flex-wrap gap-8'>
+      <div className='flex items-start py-32 justify-evenly flex-wrap gap-8 h-full'>
         {/* Carte Gauche */}
         <motion.div
           variants={leftCardVariants}

@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className='w-screen footer px-32 bg-black relative' style={{backgroundImage:"url('/svg/rrrainbow.svg')"}} > 
+    <footer className='w-screen footer px-32 bg-black relative rounded-t-3xl' style={{backgroundImage:"url('/svg/rrrainbow.svg')"}} > 
       <div className='p-6 pt-16 z-50 backdrop-blur-[1px]' >
         <div className='flex flex-col md:flex-row gap-8 md:gap-8'>
               <div>
               <Link href={"/"} className="" style={{fontFamily:'fantasy'}}><Image src='/image/logoNG.png' alt="iah" className="rounded-xl"  width={100} height={150} /> </Link>
-              <p className='w-96 text-white '>
+              <p className='w-96 text-white text-sm '>
                 Full-stack web developer.
 I design and build scalable, high-performance applications with a focus on clean architecture and user experience.
                 </p>

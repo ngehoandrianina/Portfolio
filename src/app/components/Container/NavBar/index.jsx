@@ -44,10 +44,10 @@ const Navbar = ({ heroVisible }) => {
   //px-32 pt-6
   return (
     <motion.nav
-      className="fixed top-0 left-0  right-0 z-10 backdrop-blur-sm bg-opacity-90 px-24 pt-8 "
+      className="fixed top-0 left-0 right-0 z-10 backdrop-blur-sm bg-opacity-90 lg:px-24 lg:pt-8 "
     >
       <motion.div  
-      className="flex flex-wrap items-center justify-between mx-auto p-1 px-12 rounded-full bg-dark"> 
+      className="flex flex-wrap items-center justify-between mx-auto p-1 px-12 lg:rounded-full bg-dark"> 
          <motion.div
         id="scroll-indication"
         style={{
