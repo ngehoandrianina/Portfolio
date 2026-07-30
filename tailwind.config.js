@@ -6,11 +6,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#415AF7",     // couleur personnalisée
-        secondary: "#7D3FF9",
-        Tersary: "#C620FE",
-        light: "#F1F3F4",
-        dark: "#150404",
+          primary: "var(--primary)",
+          secondary: "var(--secondary)",
+          Tersary: "var(--tersary)",
+          light: "var(--light)",
+          dark: "var(--dark)",
+          background: 'var(--background)',
+          foreground: 'var(--foreground)',
+      },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+        'archivo': ['Archivo', 'sans-serif'],
+        'caveat': ['Caveat', 'cursive'], 
+        'arimo':['Arimo','sans-serif']
       },
     },
   },

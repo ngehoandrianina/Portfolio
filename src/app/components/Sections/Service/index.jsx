@@ -6,22 +6,12 @@ import Cassroll from "../../Container/Cassroll";
 import { motion } from "framer-motion";
 import ServiceCard from "../../Container/ServiceCard";
 
-const AboutSection = () => {
+const ServiceSection = () => {
   const Service = [
     {
-      "lienimage": "/image/service/FullStack.jpg",
+      "lienimage": "/svg/ffflurry.svg",
       "Titre": "Full-Stack Web Development",
       "Description": "Design and develop complete web applications using modern technologies such as React, Node.js, and REST APIs. From frontend interfaces to backend systems and databases."
-    },
-    {
-      "lienimage": "/image/service/Frontend2.jpg",
-      "Titre": "Frontend Development",
-      "Description": "Create responsive and interactive user interfaces using HTML, CSS, JavaScript, React, and modern UI frameworks to deliver a smooth user experience."
-    },
-    {
-      "lienimage": "/image/service/Backend.jpg",
-      "Titre": "Backend Development",
-      "Description": "Build secure and scalable backend systems using technologies like Node.js, Django, or .NET, including API development and database integration."
     },
     {
       "lienimage": "/image/service/Database.jpg",
@@ -54,8 +44,8 @@ const AboutSection = () => {
     "/image/photoko.jpg",
   ];
   return (
-    <section className="text-white mb-4 ">
-      <div className=" gap-8 items-center xl:gap-16  sm:py-16  w-[100%] ">
+    <section className="mb-4" >
+      <div className="gap-8 items-start xl:gap-16  sm:py-16  w-[100%] ">
         {/* <Cassroll>
           {image.map((image, index) => (
             <img src={image} key={index} className="rounded-xl" />
@@ -67,7 +57,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ margin: "-100px" }}
-            className="text-4xl font-bold text-white mb-4 text-center"
+            className="text-4xl font-bold mb-4 text-center"
           >
             What I Can Do
           </motion.h2>
@@ -89,7 +79,7 @@ const AboutSection = () => {
             take on challenging projects, and contribute to innovative and
             impactful applications.
           </motion.p> */}
-          <div className="flex gap-8 flex-wrap justify-center">
+          <div className="flex gap-8 justify-start">
               {
                 Service.map((service,idx)=>(
                   <ServiceCard key={idx} image={service.lienimage} title={service.Titre} Description={service.Description} />
@@ -101,4 +91,4 @@ const AboutSection = () => {
     </section>
   );
 };
-export default AboutSection;
+export default ServiceSection;

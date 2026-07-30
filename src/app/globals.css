@@ -2,19 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+    --primary: #DFCBB2;
+    --secondary: #DFD3C3;
+    --tersary: #953B00;
+    --light: #DFD3C3;
+    --dark: #0A0D14;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 93%;
   }
 }
 canvas {
@@ -32,9 +38,15 @@ h1, h2, h3 {
   font-family: var(--font-archivo), sans-serif;
   letter-spacing: 0.5px; /* améliore le rendu */
 }
+p{
+  font-family: var(--font-arimo);
+}
 .no-scroll::-webkit-scrollbar{
   display: none;
  
+}
+span{
+  color:var(--primary);
 }
 .no-scroll{
   -ms-overflow-style: none; /* IE et Edge */

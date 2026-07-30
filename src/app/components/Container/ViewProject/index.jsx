@@ -1,15 +1,15 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
 
 const ViewProjet = ({show,setShow,image,desc,name,otl}) => {
   return (
     <>
     { 
       show &&
-
-    <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}}   className='bg-[#1d0831da] px-6 backdrop-blur-sm h-screen w-screen fixed top-0 left-0 z-50 flex flex-col lg:flex-row items-center justify-center'>
+    <div className='bg-[#fde9d35d] px-6 backdrop-blur-sm h-screen w-screen absolute top-0 left-0 z-50 flex flex-col lg:flex-row items-center justify-center'>
     <div className='bg-[#140521] w-full lg:w-[1200px]  md:gap-12  flex flex-col relative lg:flex-row justify-center items-center h-[500px] rounded-xl p-4'>
-        <img src={image} className='w-60 lg:w-[400px]  rounded-lg flex ' />
+        <img src={image} className='w-60 lg:w-[400px]  rounded-lg flex ' alt='image' />
         <div className='ml-4 mt-2 lg:mt-0 text-white flex flex-col w-full  lg:w-96 h-96  overflow-scroll no-scroll'>
         <div>
             <h1 className='font-sans text-xl font-bold mb-4'>{name}</h1>
@@ -29,7 +29,7 @@ const ViewProjet = ({show,setShow,image,desc,name,otl}) => {
         </div>
         <button onClick={()=>setShow(false)}  className='absolute hover:scale-110 text-white right-2 lg:right-4 top-1 font-bold cursor-pointer text-2xl'>X</button>
     </div>
-    </motion.div>
+    </div>
     
     }
 </>

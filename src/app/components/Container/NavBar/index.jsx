@@ -2,32 +2,32 @@
 import react, { useState } from "react";
 import Link from "next/link";
 import NavLink from "../NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { ArrowUpRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "../MenuOverLay";
 import AboutSection from "../../Sections/Service";
 import Image from "next/image";
 import { motion, useScroll, useSpring } from "framer-motion";
 const navLink = [
   {
-    title: "Home",
+    title: "Accueil",
     href: "#Home",
   },
   {
-    title: "Service",
+    title: "À propos",
     href: "#about",
   },
   {
-    title: "Experience",
-    href: "#Experience",
+    title: "Expertise",
+    href: "#Expertise",
   },
   {
-    title: "Skills",
-    href: "#Skills",
-  },
-  {
-    title: "Projects",
+    title: "Projets",
     href: "#Projects",
   },
+  // {
+  //   title: "Services",
+  //   href: "#Service",
+  // },
   {
     title: "Contact",
     href: "#contact",
@@ -44,9 +44,14 @@ const Navbar = ({ heroVisible }) => {
   //px-32 pt-6
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-10 bg-[#121112] backdrop-blur-sm bg-opacity-90 border-b-2 "
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="fixed top-0 left-0 right-0 z-10 backdrop-blur-sm bg-opacity-90 lg:px-24 lg:pt-8 "
     >
-      <motion.div
+      <motion.div  
+      className="flex flex-wrap items-center justify-between mx-auto p-1 px-12 lg:rounded-full bg-dark"> 
+         <motion.div
         id="scroll-indication"
         style={{
           scaleX,
@@ -54,14 +59,12 @@ const Navbar = ({ heroVisible }) => {
           top: 0,
           left: 0,
           right: 0,
-          height: 10,
+          height: 6,
           originX: 0,
-          backgroundColor: "#a72bd0",
+          backgroundColor: "#DFD3C3",
         }}
-      />
-      <motion.div  
-      className="flex flex-wrap  items-center justify-between mx-auto p-3 rounded-2xl">
-        <Link href={"/"} className="ml-10" style={{ fontFamily: "fantasy" }}>
+      /> 
+        <Link href={"/"} className="" style={{ fontFamily: "fantasy" }}>
           <Image
             src="/image/logoNG.png"
             alt="iah"
@@ -87,8 +90,8 @@ const Navbar = ({ heroVisible }) => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto mr-12 " id="navbar">
-          <ul className="flex justify-center  items-center p-4 md:p-0 flex-col md:flex-row md:space-x-8 mt-0 ">
+        <div className="menu hidden md:block md:w-auto" id="navbar">
+          <ul className="flex justify-center items-center p-4 md:p-0 flex-col md:flex-row md:space-x-8 mt-0 gap-4 ">
             {navLink.map((link, index) => (
               <li key={index}>
                 <NavLink
@@ -98,19 +101,22 @@ const Navbar = ({ heroVisible }) => {
                 />
               </li>
             ))}
-            <motion.ul
-              className=" cursor-pointer px-6 py-2 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-Tersary hover:bg-slate-800 text-white"
+          
+          </ul>
+        </div>
+         <motion.button
+              className=" hidden md:block cursor-pointer px-6 py-2 w-22 sm:w-fit rounded-full bg-gradient-to-br from-primary  to-Tersary hover:bg-slate-800 text-dark font-bold whitespace-nowrap"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 1,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                delay: 0.4,
               }}
+              
             >
-              <Link href="#contact">Lets' talk</Link>
-            </motion.ul>
-          </ul>
-        </div>
+              <Link href="#contact" className="flex gap-4 ">Discutons-en</Link>
+        </motion.button>
       </motion.div>
       {navbarOpen ? (
         <MenuOverlay links={navLink} Setnave={setNavbarOpen} />
