@@ -30,8 +30,8 @@ const Footer = () => {
   <div>
     <h2 className="font-semibold mb-4 text-white">À propos</h2>
     <ul className="space-y-2 text-gray-400 ">
-      <li><a href="#Skills" className="hover:text-white">Compétences</a></li>
-      <li><a href="#Experience" className="hover:text-white">Expérience</a></li>
+      <li><a href="#about" className="hover:text-white">À propos</a></li>
+      <li><a href="#Expertise" className="hover:text-white">Expertise</a></li>
       <li><a href="/CVAntonioClaret.pdf" download className="hover:text-white">CV</a></li>
     </ul>
   </div>

@@ -13,7 +13,7 @@ const navLink = [
     href: "#Home",
   },
   {
-    title: "A propos",
+    title: "À propos",
     href: "#about",
   },
   {
@@ -24,10 +24,10 @@ const navLink = [
     title: "Projets",
     href: "#Projects",
   },
-  {
-    title: "Services",
-    href: "#Service",
-  },
+  // {
+  //   title: "Services",
+  //   href: "#Service",
+  // },
   {
     title: "Contact",
     href: "#contact",
@@ -101,7 +101,7 @@ const Navbar = ({ heroVisible }) => {
                 />
               </li>
             ))}
-           
+          
           </ul>
         </div>
          <motion.button
