@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import emailjs from 'emailjs-com';
 import { motion, useInView } from 'framer-motion';
+import { supabase } from '../../../../lib/supabaseClient';
 
 const EmailSection = () => {
   const sectionRef = useRef(null);
@@ -24,30 +25,75 @@ const EmailSection = () => {
   const [Status, setStatus] = useState('');
   const [style, setStyle] = useState('text-green-300');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     const form = e.target;
+//     const data = new FormData(form);
+//     console.log("Contenu du FormData :");
+// for (let [key, value] of data.entries()) {
+//   console.log(key, ":", value);
+// }
+//     const res = await fetch('https://formspree.io/f/mnndqavp', {
+//       method: 'POST',
+//       body: data,
+//       headers: { Accept: 'application/json' },
+//     });
 
-    const res = await fetch('https://formspree.io/f/mnndqavp', {
-      method: 'POST',
-      body: data,
-      headers: { Accept: 'application/json' },
-    });
-
-    if (res.ok) {
-      setStatus('Message envoyé !');
-      form.reset();
-      setFrom('');
-      setSubject('');
-      setText('');
-    } else {
-      setStatus("Erreur lors de l'envoi.");
-      setStyle("text-red-500");
-    }
-  };
+//     if (res.ok) {
+//       setStatus('Message envoyé !');
+//       form.reset();
+//       setFrom('');
+//       setSubject('');
+//       setText('');
+//     } else {
+//       setStatus("Erreur lors de l'envoi.");
+//       setStyle("text-red-500");
+//     }
+//   };
 
   // Variants pour le conteneur principal
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+
+  // 1. On prépare l'objet avec les clés EXACTES de ta table Supabase
+  const payload = {
+    name: formData.get('name') || 'Anonyme', // Si tu n'as pas de champ name, met une valeur par défaut
+    email: formData.get('email'),
+    subject: formData.get('subject'),
+    content: formData.get('content'),
+    // status et read sont gérés par la base de données (valeurs par défaut)
+  };
+
+  console.log("Envoi à Supabase :", payload);
+
+  // 2. Insertion dans Supabase
+  const { error } = await supabase
+    .from('messages')
+    .insert([payload]);
+
+  // 3. Gestion du résultat
+  if (!error) {
+    setStatus('Message envoyé !');
+    setStyle("text-green-500");
+    form.reset();
+    
+    // Nettoyage des states si tu en as
+    if (typeof setFrom === 'function') setFrom('');
+    if (typeof setSubject === 'function') setSubject('');
+    if (typeof setText === 'function') setText('');
+    
+    // Effacer le message de succès après 3 secondes
+    setTimeout(() => setStatus(''), 3000);
+  } else {
+    console.error("Erreur Supabase :", error);
+    setStatus("Erreur lors de l'envoi.");
+    setStyle("text-red-500");
+  }
+};
+
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -255,7 +301,7 @@ const EmailSection = () => {
               id="email"
               required
               placeholder='example@domain.com'
-              name='Email'
+              name='email'
               className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300'
               onChange={(e) => setFrom(e.target.value)}
               value={from}
@@ -283,8 +329,8 @@ const EmailSection = () => {
               id="subject"
               required
               placeholder='Bonjour...'
-              name='Subject'
-              className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300'
+              name='subject'
+              className='bg-[#18191E] border border-[#33353f] placeholder-[#9ca2a9] text-white text-sm rounded-lg w-full p-2.5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300'
               onChange={(e) => setSubject(e.target.value)}
               value={subject}
               whileFocus={{
@@ -310,8 +356,8 @@ const EmailSection = () => {
               type='text'
               id="Message"
               placeholder='Votre message...'
-              name='Message'
-              className='bg-[#18191E] border border-[#33353f] h-32 placeholder-[#9ca2a9] text-grey-100 text-sm rounded-lg w-full p-2.5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300 resize-none'
+              name='content'
+              className='bg-[#18191E] border border-[#33353f] h-32 placeholder-[#9ca2a9] text-white text-sm rounded-lg w-full p-2.5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300 resize-none'
               onChange={(e) => setText(e.target.value)}
               value={text}
               whileFocus={{

@@ -206,7 +206,7 @@ const Myskills = () => {
         className='font-arimo font-semibold flex items-center gap-2 mb-4 text-primary tracking-wider'
         variants={itemVariants}
       >
-        <div  className="w-8 h-1 bg-primary"></div> EXPERTISE
+        <span  className="w-8 h-1 bg-primary"></span> EXPERTISE
       </motion.p>
 
       {/* En-tête */}
