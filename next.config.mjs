@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'example.com',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'bnjiqkhrlhdugikctkur.supabase.co',
+        pathname: '/storage/v1/object/public/**',
+      },
     ],
   },
 };

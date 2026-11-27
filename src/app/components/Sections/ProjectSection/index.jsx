@@ -1,22 +1,61 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import ProjectCard from "../../Container/ProjectCard/ProjectCard";
 import ProjectTags from "../../Container/ProjectTags";
 import projectsData from "../../../../data/Projectsfr.json";
 import { motion, useInView } from "framer-motion";
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
+import { supabase } from '../../../../lib/supabaseClient';
+import ProjectCardAnimated from "./projetCardAnimated"; 
 
 const ProjectSection = () => {
   const [tag, setTag] = useState("Touts");
   const [Show, setShow] = useState(false);
-  
+  const [projects, setProjects] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      async function fetchProjects() {
+        // On sélectionne tout, mais on filtre sur published = true
+        const { data:projet, error } = await supabase
+          .from('projects')
+          .select('*')
+          .eq('published', true) // Seulement les projets publiés
+          .order('created_at', { ascending: false }); // Les plus récents en premier
+        const { data: categorie } = await supabase.from('categories').select('*');
+
+        if (error) {
+          console.error('Erreur lors de la récupération des projets:', error);
+        } else {
+          setProjects(projet);
+          console.log('Projets récupérés:', projet);
+          setCategories(categorie);
+        }
+        setLoading(false);
+      }
+
+      fetchProjects();
+    }, []);
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
-  const filteredProject = projectsData.filter((project) =>
-    project.tag.includes(tag)
+  const filteredProject = projects.filter((project) =>
+  {
+    // Cas "Touts" : on affiche tout, sans filtre
+  if (tag === "Touts") return true;
+
+  // On cherche l'ID de la catégorie qui correspond au nom du tag
+  const categoryId = categories.find((c) => c.name === tag)?.id;
+
+  // Si la catégorie n'existe pas, on n'affiche rien pour ce tag
+  if (!categoryId) return false;
+
+  // On compare l'ID du projet avec l'ID trouvé
+  return project.category_id === categoryId;
+  }
   );
 
   const sectionRef = useRef(null);
@@ -24,7 +63,6 @@ const ProjectSection = () => {
     once: true,
     amount: 0.1,
   });
-
   return (
     <div ref={sectionRef} className="md:mt-16 backdrop-blur-[2px]">
       <motion.div 
@@ -144,30 +182,10 @@ const ProjectSection = () => {
       isSelected={tag === "Touts"}
     />
   </motion.div>
-  
-  <motion.div
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={isSectionInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-    transition={{
-      type: "spring",
-      stiffness: 300,
-      damping: 25,
-      duration: 0.5,
-      delay: 0.7,
-    }}
-    whileHover={{ 
-      scale: 1.05,
-      transition: { type: "spring", stiffness: 400, damping: 17 }
-    }}
-  >
-    <ProjectTags
-      onClick={handleTagChange}
-      name="Web"
-      isSelected={tag === "Web"}
-    />
-  </motion.div>
-  
-  <motion.div
+  {
+    categories.map((tech, index) => (
+    <motion.div
+    key={index}
     initial={{ opacity: 0, scale: 0.8 }}
     animate={isSectionInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
     transition={{
@@ -184,45 +202,23 @@ const ProjectSection = () => {
   >
     <ProjectTags
       onClick={handleTagChange}
-      name="Mobile"
-      isSelected={tag === "Mobile"}
+      name={tech.name}
+      isSelected={tag === tech.name}
     />
   </motion.div>
+    ))
+  }
+  
     </motion.div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProject.map((project, idx) => {
-          const cardRef = useRef(null);
-          const isCardInView = useInView(cardRef, {
-            once: true,
-            amount: 0.2,
-          });
-
-          return (
-            <motion.div
-              key={project.id}
-              ref={cardRef}
-              initial={{ y: 50, opacity: 0 }}
-              animate={isCardInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 24,
-                duration: 0.6,
-                delay: idx * 0.08,
-              }}
-            >
-              <ProjectCard
-                outil={project.outils}
-                title={project.title}
-                decription={project.description}
-                imgUrl={project.image}
-                gitUrl={project.gitUtl}
-                previewUrl={setShow}
-              />
-            </motion.div>
-          );
-        })}
-      </div>
+    <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+      {filteredProject.map((project, idx) => (
+        <ProjectCardAnimated
+          key={project.id}
+          project={project}
+          idx={idx}
+        />
+      ))}
+    </div>
     </div>
   );
 };
